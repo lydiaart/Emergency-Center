@@ -38,9 +38,9 @@ Please click on the following link for clearer video:
 
 ## Credits
 
-David Barron
-Robyn Graham
-Joe Magannom
+David Barron<br>
+Robyn Graham<br>
+Joe Magannom<br>
 Lydia Loy
     
     
