@@ -1,6 +1,7 @@
 # Emergency-Center
 
 ## Description
+Emergency Center app is forum for disaster and emergency incidents. Look up your location and see what incidents are reported for or near that area. Look up a location you are traveling to and see what roads are affected by the disaster. Report first-hand accounts of the disaster and comment on posts to update the incident or add more information.
 
 
 ## Table of Contents
