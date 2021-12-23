@@ -44,3 +44,15 @@ sequelize.sync({
     .then(() => {
         app.listen(PORT, () => console.log('Now listening'));
     });
+
+//***todo remove placce holder code */
+const htmlRoutes = require('./routes/htmlRoutes');
+app.use(express.static('views'))
+app.use('/geo', htmlRoutes);
+
+
+  //module.exports = router;
+
+  
+
+//**** remove */
