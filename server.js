@@ -36,7 +36,7 @@ app.use(express.urlencoded({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(require('./controllers/'));
+app.use(require('./controllers/'));
 
 sequelize.sync({
         force: false
