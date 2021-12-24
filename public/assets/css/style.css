@@ -16,7 +16,11 @@
     position: relative;
     right: 50px;
 }
-
 .nav-link {
     color:white !important;
+}
+footer {
+    position:fixed;
+    left:0;
+    bottom:0;
 }
