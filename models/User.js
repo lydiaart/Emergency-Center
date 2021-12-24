@@ -35,6 +35,14 @@ User.init({
         validate: {
             len: [4]
         }
+    },
+    phone: {
+        type: DataTypes.DECIMAL(10),
+        allowNull: true,
+        validate: {
+            len: [10],
+            isInt: true
+        }
     }
 }, {
     hooks: {
