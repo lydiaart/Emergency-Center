@@ -1,0 +1,62 @@
+// code to respond to a text
+//https://www.twilio.com/docs/sms/quickstart/node
+//https://dashboard.ngrok.com/get-started/setup
+//https://www.twilio.com/docs/messaging/twiml
+//https://www.twilio.com/docs/tutorials?order_by=-popularity_rank
+// https://developers.google.com/maps/documentation/places/web-service/search-find-place
+
+// TO run:
+//1) twillio login
+//2) twilio phone-numbers:update "+7071234567" --sms-url="http://localhost:1337/sms"
+// where the phone number is you twillio response number
+
+const fs = require('fs');
+const googleApiKey = process.env.googleApiKey;
+  
+let data = "This is a file containing a collection of books.";
+  
+
+
+const http = require('http');
+const express = require('express');
+let MessagingResponse = require('twilio').twiml.MessagingResponse;
+const { urlencoded } = require('body-parser');
+
+
+const app = express();
+app.use(urlencoded({ extended: false }));
+//app.use(urlencoded({ extended: false })); // middle war ethat helps parse the teillio Incoming message to a string
+
+app.post('/sms', (req, res) => {
+  const twiml = new MessagingResponse();
+  //console.log(req)
+
+  // * write to file*/
+  
+  const data = req
+  const fileOut = "twillio-msg-recieved.json"
+  const fromNumber = req.body.From
+  console.log(req.body.From) // get the from number
+  console.log(req.body) // print the entire data structure
+  console.log(req.body.Body)
+  // fs.writeFile(fileOut, data, (err) => {
+  //   if (err)
+  //     console.log(err);
+  //   else {
+  //     console.log("File written successfully\n");
+  //     console.log("The file has the following contents:");
+  //     console.log(fs.readFileSync(fileOut, "utf8"));
+  //   }
+  // });
+  // // * end write to file*/
+  const msgBack = (`https://maps.googleapis.com/maps/api/geocode/json?address=${req.body.Body}&key=${googleApiKey}`)
+
+  twiml.message(msgBack);
+
+  res.writeHead(200, {'Content-Type': 'text/xml'});
+  res.end(twiml.toString());
+});
+
+http.createServer(app).listen(1337, () => {
+  console.log('Express server listening on port 1337');
+});
