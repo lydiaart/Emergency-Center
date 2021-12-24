@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident</title>
+    <script src="https://cdn.tiny.cloud/1/qaumtkwq4n5y6t7h2ssi07ndve97orrtor90iocss8hpld9s/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
+    
+</head>
+<body>
+    <form>
+        <label for="report-title">Report Title:</label><br>
+        <input type="text" id="report-title" name="report-title" ><br>
+
+        <br>
+
+        <label for="report-desc">Report Description:</label><br>
+        <textarea id="#mytextarea" name="report-desc" ></textarea>
+
+        <br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <script>
+        tinymce.init({
+          selector: 'textarea',
+          plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+          toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
+          toolbar_mode: 'floating',
+          tinycomments_mode: 'embedded',
+          tinycomments_author: 'Author name',
+        });
+      </script>
+</body>
+</html>
