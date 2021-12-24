@@ -1,9 +1,22 @@
 .bg-blue {
-background-color:#1c4886ff;
+    background-color:#1c4886ff !important;
+    
 }
 .bg-grey {
-   background-color:#eeeeeeff; 
+   background-color:#eeeeeeff !important; 
 }
 .bg-green {
-    background-color:#38761dff;
+    background-color:#38761dff !important;
+}
+.text-blue {
+    color:#1c4886ff !important;
+}
+.navbar-nav 
+{
+    position: relative;
+    right: 50px;
+}
+
+.nav-link {
+    color:white !important;
 }
