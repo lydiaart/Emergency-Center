@@ -29,7 +29,14 @@ router.get('/:id', (req, res) => {
             },
             include: [{
                     model: Post,
-                    attributes: ['id', 'title', 'contents', 'created_at']
+                    attributes: [
+                        'id',
+                        'title',
+                        'contents',
+                        'latitude',
+                        'longitude',
+                        'created_at'
+                    ]
                 },
                 {
                     model: Comment,
@@ -57,10 +64,11 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    // expects {username: 'david', password: 'password1234'}
+    // expects {username: 'david', password: 'password123', phone: 9165551234}
     User.create({
             username: req.body.username,
-            password: req.body.password
+            password: req.body.password,
+            phone: req.body.phone
         })
         .then(dbUserData => {
             req.session.save(() => {
@@ -78,7 +86,7 @@ router.post('/', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-    // expects {username: 'david', password: 'password1234'}
+    // expects {username: 'david', password: 'password123'}
     User.findOne({
         where: {
             username: req.body.username
@@ -103,6 +111,7 @@ router.post('/login', (req, res) => {
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
+            req.session.phone = dbUserData.phone;
             req.session.loggedIn = true;
 
             res.json({
