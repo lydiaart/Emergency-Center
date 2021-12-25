@@ -18,7 +18,7 @@ router.get('/login', (req, res) => {
     // res.render('login', {
     //     loggedIn: req.session.loggedIn
     //   });
-      res.render('report-form', {loggedIn: req.session.loggedIn})
+      res.render('dashboard', {loggedIn: req.session.loggedIn})
     //res.redirect('/')
 
     
