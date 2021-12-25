@@ -20,6 +20,7 @@ async function signupFormHandler(event) {
       // check the response status
       if (response.ok) {
         console.log('success, user registered');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
@@ -43,7 +44,7 @@ async function signupFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }

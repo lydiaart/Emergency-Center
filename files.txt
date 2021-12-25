@@ -1,2 +1,9 @@
 Robyn is working on views directory on html forms
 Robyn is working on branch tinymce 
+
+home-routes.js : Joe
+user-routes.js: Joe
+login.js: Joe
+logout.js: Joe
+login.handelbars: Joe
+header.handlebars:  Joe
