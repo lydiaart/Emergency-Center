@@ -7,3 +7,5 @@ login.js: Joe
 logout.js: Joe
 login.handelbars: Joe
 header.handlebars:  Joe
+
+controller directory: David
