@@ -33,6 +33,6 @@ function getCacheGeoCoords() {
     navigator.geolocation.getCurrentPosition(success, error);
   }
 
-  setTimeout(getCacheGeoCoords, process.env.waitCounterGPS);
+  setTimeout(getCacheGeoCoords, 3600000);
 }
 getCacheGeoCoords();

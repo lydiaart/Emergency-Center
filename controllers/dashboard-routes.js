@@ -10,6 +10,29 @@ const withAuth = require('../utils/auth');
    
 // });
 
+
+
+router.post('/posts', withAuth, (req, res) => {
+  // expects {title: 'Flooding in Arden Fair mall', contents: 'South side of mall', 
+  //          latitude: -143, longitude: 45, user_id: 1 }
+  console.log(`\n\n\n\n \t\t\t\t ******* in dashboard-routes.js:/posts`)
+  Post.create({
+          title: req.body.title,
+          contents: req.body.contents,
+          latitude: req.body.latitude,
+          longitude: req.body.longitude,
+          user_id: req.session.user_id
+      })
+      .then(dbPostData => {
+        //console.log(JSON.stringify(dbPostData))
+        res.json(dbPostData)
+      })
+      .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
+      });
+});
+
 router.get('/', withAuth, (req, res) => {
 
     Post.findAll({
