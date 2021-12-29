@@ -14,7 +14,7 @@ const twillioFromNumber = process.env.twillioFromNumber;
 const clientTwillio = require('twilio')(twillioAccountSid, TwillioAuthToken);
 
 
-//https://maps.googleapis.com/maps/api/geocode/json?latlng=38.4097,-122.7388&key=AIzaSyA0xTQIZzOUGSAytuCHRd98nNSzuinHxKE
+//https://maps.googleapis.com/maps/api/geocode/json?latlng=38.4097,-122.7388&key=apiKey
 
 
 
