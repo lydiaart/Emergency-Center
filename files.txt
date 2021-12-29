@@ -5,11 +5,11 @@ Robyn:
 /views/comment.html
 Robyn is working on branch tinymce 
 
-home-routes.js : Joe
-user-routes.js: Joe
+home-routes.js : 
+user-routes.js: 
 login.js: Joe
 logout.js: Joe
-login.handelbars: Joe
-header.handlebars:  Joe
+login.handelbars: 
+header.handlebars:  
 
 controller/controllers directory: David
