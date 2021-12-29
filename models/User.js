@@ -21,6 +21,34 @@ User.init({
         primaryKey: true,
         autoIncrement: true
     },
+    firstName: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    lastName: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    phoneNumber: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
+        allowNull: false,
+        unique: true,
+        validate: {
+            isValidPhoneNo: function(value) {
+                if (!value) return value;
+    
+                var regexp = /^[0-9]+$/;
+                var values = (Array.isArray(value)) ? value : [value];
+    
+                values.forEach(function(val) {
+                    if (!regexp.test(val)) {
+                        throw new Error("Number only is allowed.");
+                    }
+                });
+                return value;
+            }
+        }
+    },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -35,7 +63,11 @@ User.init({
         validate: {
             len: [4]
         }
-    }
+    },
+    avater: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
 }, {
     hooks: {
         // set up beforeCreate lifecycle "hook" functionality
