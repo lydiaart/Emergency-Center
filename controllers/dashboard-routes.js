@@ -66,7 +66,14 @@ router.post('/posts', withAuth, (req, res) => {
                // 2) get list of users & phone numbers and the corelating county thet subscibe to
  
                if(formatted_address){
-                
+                let fakeJSONUsers = [
+                  {formatted_address:"San Francisco County, CA, USA",
+                   phone:"+17071234567"},
+                   {formatted_address:"Sacremento County, CA, USA",
+                   phone:"+14151234567"},
+                   {formatted_address:"Marin County, CA, USA",
+                   phone:"+13031234567"},
+                ]
                 let usersArr = fakeJSONUsers
                 usersaToAlert = usersArr.filter(user => user.formatted_address === formatted_address);
                 console.log(`usersaToAlert: ${JSON.stringify(usersaToAlert)}`)
