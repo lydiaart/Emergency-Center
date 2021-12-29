@@ -7,6 +7,7 @@ const {
 
 // get all users
 router.get('/', (req, res) => {
+    
     User.findAll({
             attributes: {
                 exclude: ['password']
@@ -65,6 +66,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     // expects {username: 'david', password: 'password123', phone: 9165551234}
+    console.log(`in user-routes.js creating user`)
     User.create({
             username: req.body.username,
             password: req.body.password,
@@ -88,6 +90,7 @@ router.post('/', (req, res) => {
 
 router.post('/login', (req, res) => {
     // expects {username: 'david', password: 'password123'}
+    console.log(`\n \n \n  \n ********** in user-routes.js:/login`)
     User.findOne({
         where: {
             username: req.body.username
@@ -108,13 +111,13 @@ router.post('/login', (req, res) => {
             });
             return;
         }
-
+        //console.log(`********* dbUserData ${JSON.stringify(dbUserData)}`)
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.phone = dbUserData.phone;
             req.session.loggedIn = true;
-
+            
             res.json({
                 user: dbUserData,
                 message: 'You are now logged in!'

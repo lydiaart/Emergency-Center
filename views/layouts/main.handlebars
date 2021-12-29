@@ -12,9 +12,13 @@
 </head>
 
 <body>
+    
     {{>header}}
     {{{body}}}
     {{>footer}}
+    {{#if loggedIn}}
+    <script src="/assets/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
