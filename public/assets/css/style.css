@@ -14,20 +14,20 @@ html{
     overflow-y:scroll ;
 
 }
-
 body{
     height: 100vh !important;
 }
-
 .hide{
     display: none;
 }
-
 .create-post-title{
     text-align: right;
 }
-
 .comment{
     color:#118ab2 !important;
     font-family: Arial, Helvetica, sans-serif;
+}
+.about{
+    color:white !important;
+    list-style: none;
 }

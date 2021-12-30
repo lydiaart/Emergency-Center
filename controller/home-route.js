@@ -25,5 +25,9 @@ router.get('/create-post', (req, res) => {
     res.render('create-post')
 });
 
+router.get('/about', (req, res) => {
+    res.render('about')
+})
+
 
 module.exports = router;
