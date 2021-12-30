@@ -1,47 +1,53 @@
 # Emergency-Center
 
-## Description
-Emergency Center app is forum for disaster and emergency incidents. Look up your location and see what incidents are reported for or near that area. Look up a location you are traveling to and see what roads are affected by the disaster. Report first-hand accounts of the disaster and comment on posts to update the incident or add more information.
-
-
-## Table of Contents
-* [Installation](#installation)
-* [Built With](#builtwith)
-* [Usage](#usage)
-* [Website](#website)
+#### Table of Contents
+* [Description](#description)
+* [Links](#links)
+* [Technologies](#technologies)
+* [Dependencies](#dependencies)
 * [Credits](#credits)
 
 
-## Installation 
-  1. 
-  2. 
-  3. 
+## Description
+![App Screenshot](./public/assets/images/home-snapshot.png)
+
+Emergency Center app is a forum for disaster and emergency incidents. You can view incidents that are reported for or near your current location. Sign-up to report first-hand accounts of the disaster or comment on posts to update the incident and add more information.
+
+Choose an avatar to display on your comments and posts on sign up.
 
 
-## Built With
-* 
-* 
-* 
-* 
-* 
 
-  
-## Usage 
-The following image demonstrates the web application's appearance and functionality:
-<p><img src=".gif" alt="Demonstration"/></p>
-Please click on the following link for clearer video:
-<p><a href="">Link</a></p>
+## Links
+Deployed at: Heroku link TBD
 
+Repository at: https://github.com/flowingcityloy/Emergency-Center
 
-## Website
-[Repository](https://github.com/flowingcityloy/Emergency-Center)<br>
-[Live Site](https://flowingcityloy.github.io/Emergency-Center/)
+Report issues: https://github.com/flowingcityloy/Emergency-Center/issues 
+
+## Technologies
+This app is uses Express.js to store a MySQL database of posts, users and comments. We use Heroku as our runtime environment for our server. 
+
+### Design
+Semantic UI framework
+
+## Node Dependencies
+* axios
+* bcrypt
+* connect-session-sequelize
+* dotenv
+* express
+* express-handlebars
+* express-session
+* mysql2
+* node-fetch
+* sequelize
+* twilio
+
 
 ## Credits
-
-David Barron<br>
-Robyn Graham<br>
-Joe Magannom<br>
+David Barron
+Robyn Graham
+Joe Magannom
 Lydia Loy
     
-    
+
