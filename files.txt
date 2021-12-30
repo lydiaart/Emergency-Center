@@ -1,1 +1,15 @@
-robyn is working on views directory on html forms
+Robyn:
+/views/report-form.html 
+/views/login.html
+/views/sign-up.html
+/views/comment.html
+Robyn is working on branch tinymce 
+
+home-routes.js : 
+user-routes.js: 
+login.js: Joe
+logout.js: Joe
+login.handelbars: 
+header.handlebars:  
+
+controller/controllers directory: David
