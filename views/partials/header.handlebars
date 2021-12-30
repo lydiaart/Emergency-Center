@@ -17,4 +17,20 @@
                 </div>
             </div>
         </div>
+
+    </div>
+
+    <ul class="navbar-nav">
+        
+        {{#if loggedIn}} 
+            <li><button id="logout" class="nav-link">logout</button></li>
+        {{else}}
+            <li class="nav-item"  ><a class="nav-link" href="/login">login</a></li>
+        {{/if}}
+        
+        
+    </ul>
+
+
+</nav>
     </div>
