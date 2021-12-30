@@ -1,4 +1,4 @@
-var comment = document.querySelector(".comment");
+var comment = document.querySelectorAll(".comment");
 
 function showComments(event){
     var selector = this.getAttribute("data-id")
@@ -14,4 +14,7 @@ function showComments(event){
   
 }
 
-comment.addEventListener("mouseover", showComments); 
+for (let i = 0; i < comment.length; i++) {
+    comment[i].addEventListener("mouseover", showComments); 
+    
+}

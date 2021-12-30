@@ -1,5 +1,5 @@
 const router = require('express').Router()
-
+const { Post, Comment, User } = require('../models')
 
 router.get('/', (req, res) => {
     res.render('homepage')
@@ -18,7 +18,33 @@ router.get('/comments', (req, res) => {
 });
 
 router.get('/view-posts', (req, res) => {
-    res.render('view-posts')
+   Post.findAll({
+      include: [
+          {
+              model: Comment,
+              include: [
+                  {
+                      model: User,
+                  }
+              ]
+          },{
+              model: User,
+          }
+      ]
+   }) 
+   .then(postData => {
+     const posts = postData.map(post => {
+         return post.get({
+             plain: true
+         })
+     }) 
+
+    console.log(posts);
+
+    res.render('view-posts', {posts})
+   })
+
+
 });
 
 router.get('/create-post', (req, res) => {

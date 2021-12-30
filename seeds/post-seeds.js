@@ -3,35 +3,35 @@ const {
 } = require('../models');
 
 const postdata = [{
-        title: 'Ea assumenda at odit illum sunt, non harum quo alias ratione quasi dolorem blanditiis quae aliquid error!',
-        contents: 'A fuga, labore natus commodi nihil deserunt deleniti perferendis earum atque harum et.',
+        title: 'Wildfire nightmare captured in harrowing image of California burning',
+        contents: 'THIS is what a US wildfire looks like up close. Trees and embers burn on the other side of the Bidwell Bar Bridge, which spans California’s Lake Oroville in Butte county. These appear white in the image, while the lights to the right are from a small boat.',
         user_id: 10,
         latitude: 36.7783,
         longitude: 119.4179
     },
     {
-        title: 'Laborum vero veritatis alias velit?',
-        contents: 'Minima officia doloremque sapiente animi voluptate incidunt natus obcaecati alias, consectetur magni molestiae, eveniet architecto, provident odit.',
+        title: 'Dozens Are Killed as Tornadoes and Severe Weather Strike Southern States',
+        contents: 'The storm carved a destructive path across six states on Sunday and Monday, causing widespread damage and cutting power to tens of thousands of customers.',
         user_id: 8,
         latitude: 36.7783,
         longitude: 119.4179
     },
     {
-        title: 'Nemo temporibus tempora perferendis animi dolorum vitae laborum?',
-        contents: 'Inventore asperiores doloremque incidunt accusantium repellat.',
+        title: 'Serious tsunami hits Greece and Turkey after 7.0 earthquake',
+        contents: 'On 30 October 2020, at 13.51 local time (11.51 UTC), an earthquake of magnitude 7.0 Mw struck off the Aegean coast of Turkey, south of Izmir, and north of the Greek island of Samos (37.91 N 26.79 E), with an estimated hypocentral depth of 21 km (USGS-United States Geological Survey). The earthquake triggered a tsunami that flooded the coastal district of Seferihisar (Turkey) and the port of Samos (Greece).',
         user_id: 1,
         latitude: 36.7783,
         longitude: 119.4179
     },
     {
-        title: 'Dolor quaerat repellat, autem doloremque impedit soluta consequuntur corporis maxime.',
-        contents: 'Consectetur distinctio dolorem nulla, ipsam rerum natus delectus est eum eveniet temporibus vitae.',
+        title: 'Earthquakes',
+        contents: 'Earthquakes are the result of plate tectonics, or shifting plates in the crust of Earth, and quakes occur when the frictional stress of gliding plate boundaries builds and causes failure at a fault line. In an earthquake, elastic strain energy is released and waves radiate, shaking the ground. Scientists can predict where major temblors might occur in a general sense, but research does not yet allow forecasts for specific locations or accurate predictions of timing. Major earthquakes, some generating tsunamis, have leveled entire cities and affected whole countries. Relatively minor earthquakes can also be induced, or caused by human activity, including extraction of minerals from Earth and the collapse of large buildings.',
         user_id: 4,
         latitude: 36.7783,
         longitude: 119.4179
     },
     {
-        title: 'Voluptatibus.',
+        title: "California's 7.1 earthquake–and how earthquakes work",
         contents: 'Perferendis ipsam beatae ratione aspernatur esse suscipit officiis.',
         user_id: 7,
         latitude: 36.7783,
