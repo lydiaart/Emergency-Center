@@ -4,7 +4,7 @@ const {
 } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-
+const Sequelize = require('Sequelize');
 // create our User model
 class User extends Model {
     // set up method to run on instance data (per user) to check password
@@ -30,24 +30,9 @@ User.init({
         allowNull: false
     },
     phoneNumber: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
+        type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
-        validate: {
-            isValidPhoneNo: function(value) {
-                if (!value) return value;
-    
-                var regexp = /^[0-9]+$/;
-                var values = (Array.isArray(value)) ? value : [value];
-    
-                values.forEach(function(val) {
-                    if (!regexp.test(val)) {
-                        throw new Error("Number only is allowed.");
-                    }
-                });
-                return value;
-            }
-        }
+       
     },
     username: {
         type: DataTypes.STRING,
@@ -64,7 +49,7 @@ User.init({
             len: [4]
         }
     },
-    avater: {
+    avatar: {
         type: DataTypes.STRING,
         allowNull: false
     },
