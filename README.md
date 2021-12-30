@@ -39,6 +39,9 @@ Please click on the following link for clearer video:
 
 ## Credits
 
+Semantic UI<br>
+https://www.freelogodesign.org/ <br>
+google.com <br>
 David Barron<br>
 Robyn Graham<br>
 Joe Magannom<br>
