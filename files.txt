@@ -1,9 +1,5 @@
 Robyn:
-/views/report-form.html 
-/views/login.html
-/views/sign-up.html
-/views/comment.html
-Robyn is working on branch tinymce 
+README.md on test-merge branch
 
 home-routes.js : 
 user-routes.js: 
