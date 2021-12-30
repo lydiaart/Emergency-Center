@@ -10,3 +10,18 @@
 .margin-left{
     margin-left: 10% !important;
 }
+html{
+    overflow-y:scroll ;
+
+}
+
+body{
+    height: 100vh !important;
+}
+
+.hide{
+    display: none;
+}
+.create-post-title{
+    text-align: right;
+}
