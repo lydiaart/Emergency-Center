@@ -38,7 +38,7 @@ app.use(routes);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require('./controllers/'));
+app.use(require('./controller/'));
 
 sequelize.sync({
         force: false
