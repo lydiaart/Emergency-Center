@@ -82,8 +82,11 @@ const userdata = [{
         phoneNumber: '212-785-3452',
         firstName: 'Roger',
         lastName: 'Ken',
-        avatar: 'https://semantic-ui.com//images/avatar/large/joe.jpg'
-    }
+        avatar: 'https://semantic-ui.com//images/avatar/large/joe.jpg',
+        username: 'david',
+        password: 'password123',
+        phone: 9167529927
+    } 
 ];
 
 const seedUsers = () => User.bulkCreate(userdata, {

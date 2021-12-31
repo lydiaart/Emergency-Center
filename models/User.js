@@ -49,10 +49,21 @@ User.init({
             len: [4]
         }
     },
+
     avatar: {
         type: DataTypes.STRING,
         allowNull: false
     },
+
+    phone: {
+        type: DataTypes.DECIMAL(10),
+        allowNull: true,
+        validate: {
+            len: [10],
+            isInt: true
+        }
+    }
+  
 }, {
     hooks: {
         // set up beforeCreate lifecycle "hook" functionality

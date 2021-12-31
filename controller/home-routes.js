@@ -1,7 +1,17 @@
-const router = require('express').Router()
-const { Post, Comment, User } = require('../models')
+const router = require('express').Router();
+const sequelize = require('../config/connection');
+const { Post, User, Comment, Vote } = require('../models');
 
 router.get('/', (req, res) => {
+    console.log('======================');
+    //console.log(req.session);
+    res.render('homepage', {
+        loggedIn: req.session.loggedIn
+      });
+  });
+
+
+  router.get('/', (req, res) => {
     res.render('homepage')
 });
 
@@ -54,6 +64,9 @@ router.get('/create-post', (req, res) => {
 router.get('/about', (req, res) => {
     res.render('about')
 })
+
+
+
 
 
 module.exports = router;
