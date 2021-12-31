@@ -1,43 +1,49 @@
 # Emergency-Center
 
+#### Table of Contents
+- [Emergency-Center](#emergency-center)
+      - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Links](#links)
+  - [Technologies](#technologies)
+    - [Design](#design)
+  - [Node Dependencies](#node-dependencies)
+
+
 ## Description
-Emergency Center app is forum for disaster and emergency incidents. Look up your location and see what incidents are reported for or near that area. Look up a location you are traveling to and see what roads are affected by the disaster. Report first-hand accounts of the disaster and comment on posts to update the incident or add more information.
+![App Screenshot](./public/assets/images/home-snapshot.png)
+
+Emergency Center app is a forum for disaster and emergency incidents. You can view incidents that are reported for or near your current location. Sign-up to report first-hand accounts of the disaster or comment on posts to update the incident and add more information.
+
+Choose an avatar to display on your comments and posts on sign up.
 
 
-## Table of Contents
-* [Installation](#installation)
-* [Built With](#builtwith)
-* [Usage](#usage)
-* [Website](#website)
-* [Credits](#credits)
 
+## Links
+Deployed at: Heroku link TBD
 
-## Installation 
-  1. 
-  2. 
-  3. 
+Repository at: https://github.com/flowingcityloy/Emergency-Center
 
+Report issues: https://github.com/flowingcityloy/Emergency-Center/issues 
 
-## Built With
-* 
-* 
-* 
-* 
-* 
+## Technologies
+This app is uses Express.js to store a MySQL database of posts, users and comments. We use Heroku as our runtime environment for our server. 
 
-  
-## Usage 
-The following image demonstrates the web application's appearance and functionality:
-<p><img src=".gif" alt="Demonstration"/></p>
-Please click on the following link for clearer video:
-<p><a href="">Link</a></p>
+### Design
+Semantic UI framework
 
-
-## Website
-[Repository](https://github.com/flowingcityloy/Emergency-Center)<br>
-[Live Site](https://flowingcityloy.github.io/Emergency-Center/)
-
-## Credits
+## Node Dependencies
+* axios
+* bcrypt
+* connect-session-sequelize
+* dotenv
+* express
+* express-handlebars
+* express-session
+* mysql2
+* node-fetch
+* sequelize
+* twilio
 
 Semantic UI<br>
 https://www.freelogodesign.org/ <br>
@@ -47,4 +53,4 @@ Robyn Graham<br>
 Joe Magannom<br>
 Lydia Loy
     
-    
+
