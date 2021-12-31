@@ -49,7 +49,7 @@ Choose an avatar to display on your comments and posts on sign up.
   * nodemon
   * sequelize 
   * Semantic UI
-  
+
 
 ## Usage 
 The following image demonstrates the web application's appearance and functionality:
@@ -57,9 +57,9 @@ The following image demonstrates the web application's appearance and functional
 
 
 
-## Websites
+## Website
 [Repository](https://github.com/flowingcityloy/Emergency-Center)<br />
-[Live site](https://)
+[Live site](https://emergency-center.herokuapp.com//)
 
 
 
