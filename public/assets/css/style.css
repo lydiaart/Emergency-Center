@@ -12,10 +12,13 @@
 }
 html{
     overflow-y:scroll ;
-
 }
 body{
-    height: 100vh !important;
+     
+    position:absolute;
+    z-index: 3;
+ 
+    width: 100%;
 }
 .hide{
     display: none;
@@ -31,3 +34,15 @@ body{
     color:white !important;
     list-style: none;
 }
+.title{
+    color: white !important;
+}
+
+#myVideo {
+    position: absolute;
+    z-index: -1;
+   
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  
