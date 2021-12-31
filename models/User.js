@@ -4,7 +4,6 @@ const {
 } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-// do we need this?
 const Sequelize = require('Sequelize');
 // create our User model
 class User extends Model {
