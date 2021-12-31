@@ -20,7 +20,7 @@
 // code below is from joe's branch feature/signin-signup with working signup form
 
 // for login form
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+//document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 // for sign up form with form id from signup handlebars
 document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);
 
