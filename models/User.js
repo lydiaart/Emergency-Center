@@ -4,7 +4,7 @@ const {
 } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-
+const Sequelize = require('Sequelize');
 // create our User model
 class User extends Model {
     // set up method to run on instance data (per user) to check password
@@ -21,6 +21,19 @@ User.init({
         primaryKey: true,
         autoIncrement: true
     },
+    firstName: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    lastName: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    phoneNumber: {
+        type: DataTypes.STRING,
+        allowNull: false,
+       
+    },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -36,6 +49,12 @@ User.init({
             len: [4]
         }
     },
+
+    avatar: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+
     phone: {
         type: DataTypes.DECIMAL(10),
         allowNull: true,
@@ -44,6 +63,7 @@ User.init({
             isInt: true
         }
     }
+  
 }, {
     hooks: {
         // set up beforeCreate lifecycle "hook" functionality

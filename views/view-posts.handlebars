@@ -1,0 +1,50 @@
+<div class="ui hidden divider"></div>
+
+<div class="ui centered container">
+  <div class="create-post-title">
+    <h3>Create New Post <a href="/create-post"> <i class="plus icon"></i></a> </h3>
+  </div>
+
+  {{#each posts}}
+  <div class="ui hidden divider"></div>
+  <div class="topic">
+
+    <h2> {{title}} </h2>
+    <p> {{contents}} <br> wrote by {{user.firstName}} {{user.lastName}} on {{format_date createdAt}}  </p>
+ 
+    <b data-id="comment{{id}}" data-status="hide" class="comment"> comments({{comments.length}})</b>
+ 
+    <div id="comment{{id}}" class="ui comments hide">
+      <h3 class="ui dividing header">Comments <a href="/comments"><i class="plus icon"></i> </a> </h3>
+      {{#each comments}}
+
+      <div class="comment">
+        <a class="avatar">
+          <img src="{{user.avatar}}">
+        </a>
+        <div class="content">
+          <a class="author">{{user.firstName}} {{user.lastName}}</a>
+          <div class="metadata">
+            <span class="date">{{format_date createdAt}} </span>
+          </div>
+          <div class="text">
+            {{comment_text}}
+          </div>
+
+        </div>
+      </div>
+
+      {{/each}}
+    </div>
+
+
+  </div>
+
+
+  {{/each}}
+  <div class="ui hidden divider"></div>
+</div>
+
+<div class="ui hidden divider"></div>
+
+<script src="/assets/js/view-post.js"></script>

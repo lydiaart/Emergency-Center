@@ -3,252 +3,252 @@ const {
 } = require('../models');
 
 const commentdata = [{
-        comment_text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+        comment_text: 'Oh My...',
         user_id: 6,
         post_id: 1
     },
     {
-        comment_text: 'Esse facere nemo mollitia iusto eveniet eum maxime nesciunt rem architecto fugiat quas, veniam repudiandae unde minus iste commodi omnis sapiente fugit.',
+        comment_text: 'This is terrible!',
         user_id: 6,
         post_id: 8
     },
     {
-        comment_text: 'Earum at hic, veritatis beatae natus quas nesciunt blanditiis aliquid quasi porro vitae ea, nulla inventore libero impedit fugiat necessitatibus quo quis atque.',
+        comment_text: 'Prayers and hearts for those who are in this situation.',
         user_id: 3,
         post_id: 10
     },
     {
-        comment_text: 'Magni, et dolores! Modi voluptates porro laborum.',
+        comment_text: 'What is going on?!',
         user_id: 3,
         post_id: 18
     },
     {
-        comment_text: 'Possimus at pariatur illo vero animi illum unde nulla tenetur explicabo magnam suscipit nesciunt doloribus architecto ipsam, natus aliquid dolore aliquam.',
+        comment_text: 'Seriousely?!',
         user_id: 7,
         post_id: 5
     },
     {
-        comment_text: 'Soluta ad itaque culpa vitae odit totam quod fugiat.',
+        comment_text: 'Speechless..',
         user_id: 1,
         post_id: 20
     },
     {
-        comment_text: 'Officiis ex ad omnis debitis at, quia nostrum fuga animi quod laboriosam deleniti, ea tenetur cupiditate dignissimos aliquid ut sed reiciendis illum illo modi, tempore dicta quaerat.',
+        comment_text: 'Ugh. Aweful!',
         user_id: 6,
         post_id: 7
     },
     {
-        comment_text: 'Aut, debitis at.',
+        comment_text: 'Yikes!',
         user_id: 7,
         post_id: 4
     },
     {
-        comment_text: 'Pariatur ratione qui nisi minima at, recusandae consequatur, ea quae doloremque explicabo voluptates.',
+        comment_text: 'I am so annoyed by this..',
         user_id: 6,
         post_id: 12
     },
     {
-        comment_text: 'Accusamus eum animi dignissimos sequi ducimus, voluptate suscipit, repudiandae fugit soluta facilis beatae impedit laboriosam, ipsam possimus.',
+        comment_text: 'Where is this happened?',
         user_id: 6,
         post_id: 20
     },
     {
-        comment_text: 'Temporibus commodi maiores recusandae veritatis facere?',
+        comment_text: 'wow, I am so lucky that I just came back from there!',
         user_id: 3,
         post_id: 14
     },
     {
-        comment_text: 'Velit illum magnam porro libero reiciendis, minus quasi temporibus dolor.',
+        comment_text: 'Oh no, my family is very close to that area. Hope they will be okay.',
         user_id: 5,
         post_id: 4
     },
     {
-        comment_text: 'Ducimus, adipisci illum.',
+        comment_text: 'I need to checkup on my grandpa!',
         user_id: 4,
         post_id: 9
     },
     {
-        comment_text: 'Consequatur quae consectetur libero inventore blanditiis alias ipsum nihil eveniet delectus?',
+        comment_text: 'Shocking news!',
         user_id: 5,
         post_id: 14
     },
     {
-        comment_text: 'Quisque porta volutpat erat.',
+        comment_text: 'How are they gonna survive?',
         user_id: 6,
         post_id: 2
     },
     {
-        comment_text: 'Quod perspiciatis illum quos officiis ad cupiditate architecto voluptatem vel doloremque fugit.',
+        comment_text: 'I have lost contact with them couple days. What shall I do at this point?',
         user_id: 8,
         post_id: 2
     },
     {
-        comment_text: 'Beatae inventore eius accusamus dolore omnis repudiandae veniam cum consectetur repellendus rem nisi.',
+        comment_text: 'Peace with them',
         user_id: 2,
         post_id: 20
     },
     {
-        comment_text: 'Nobis quis praesentium tempora enim.',
+        comment_text: 'Hope everything is alright!',
         user_id: 4,
         post_id: 11
     },
     {
-        comment_text: 'Animi, beatae. Sed, autem dignissimos id nobis sunt facere.',
+        comment_text: 'Is this the end of the world?!',
         user_id: 5,
         post_id: 13
     },
     {
-        comment_text: 'Distinctio praesentium dolores, excepturi cumque optio unde quis magnam quisquam harum assumenda.',
+        comment_text: 'Definitely not.',
         user_id: 9,
         post_id: 16
     },
     {
-        comment_text: 'Curabitur convallis.',
+        comment_text: 'Wish they will get help soon!',
         user_id: 6,
         post_id: 4
     },
     {
-        comment_text: 'Esse ratione voluptate, ducimus vel nemo error amet excepturi?',
+        comment_text: 'Thanks for the post!',
         user_id: 4,
         post_id: 10
     },
     {
-        comment_text: 'Morbi non quam nec dui luctus rutrum.',
+        comment_text: 'Sorry for what happened..',
         user_id: 3,
         post_id: 8
     },
     {
-        comment_text: 'Assumenda numquam eius dignissimos quaerat nesciunt.',
+        comment_text: 'So sad..',
         user_id: 8,
         post_id: 10
     },
     {
-        comment_text: 'Excepturi quasi nobis reprehenderit atque exercitationem commodi vel magni velit earum culpa!',
+        comment_text: 'How is it possible?!',
         user_id: 1,
         post_id: 15
     },
     {
-        comment_text: 'Sint beatae facere exercitationem alias tempore voluptatibus eius maxime officia nam.',
+        comment_text: 'Unbelievable!',
         user_id: 5,
         post_id: 3
     },
     {
-        comment_text: 'Fugit!',
+        comment_text: 'Really?!',
         user_id: 1,
         post_id: 15
     },
     {
-        comment_text: 'Exercitationem necessitatibus quae beatae saepe quaerat illum iure?',
+        comment_text: 'Oh dear..',
         user_id: 4,
         post_id: 16
     },
     {
-        comment_text: 'Blanditiis voluptate modi inventore necessitatibus odit dicta quos voluptas vel, aut ab illo soluta labore minus praesentium magni!',
+        comment_text: 'Have some mercy please.',
         user_id: 4,
         post_id: 18
     },
     {
-        comment_text: 'A odit quo consectetur.',
+        comment_text: 'Aweful!',
         user_id: 4,
         post_id: 10
     },
     {
-        comment_text: 'Sed ante. Vivamus tortor.',
+        comment_text: 'Ssuch a sad news!',
         user_id: 7,
         post_id: 5
     },
     {
-        comment_text: 'Autem in vitae perspiciatis dolores sapiente harum quam minima sit maxime eaque.',
+        comment_text: 'Peace with those who are in danger.',
         user_id: 10,
         post_id: 1
     },
     {
-        comment_text: 'Modi nulla fuga doloribus possimus beatae quidem vel doloremque minus ea animi tempore facere laboriosam veniam perferendis.',
+        comment_text: 'Hope they will find a way out!',
         user_id: 3,
         post_id: 19
     },
     {
-        comment_text: 'Facilis.',
+        comment_text: 'Wish this will end soon!',
         user_id: 5,
         post_id: 3
     },
     {
-        comment_text: 'Blanditiis iure quasi consectetur id facere officia eaque odio.',
+        comment_text: 'Seriousely again?!',
         user_id: 10,
         post_id: 14
     },
     {
-        comment_text: 'Accusamus aperiam, minus corporis doloremque excepturi.',
+        comment_text: 'I feel really bad..',
         user_id: 10,
         post_id: 8
     },
     {
-        comment_text: 'Dolores omnis magni placeat a repellat iste obcaecati adipisci dolorem sed!',
+        comment_text: 'Hoping they will get needed help soonest possible!',
         user_id: 10,
         post_id: 11
     },
     {
-        comment_text: 'Dolore in quisquam enim.',
+        comment_text: 'What a terrible situation!',
         user_id: 8,
         post_id: 5
     },
     {
-        comment_text: 'Neque quaerat delectus sapiente rerum sit!',
+        comment_text: 'Is there anything that will be worse than this?',
         user_id: 8,
         post_id: 19
     },
     {
-        comment_text: 'Atque incidunt minima adipisci itaque, optio, harum excepturi ab.',
+        comment_text: 'It happened without a warning!',
         user_id: 9,
         post_id: 19
     },
     {
-        comment_text: 'Cupiditate culpa quod impedit labore soluta sit reprehenderit tempore.',
+        comment_text: 'I feel lucky that I am far away from that location!',
         user_id: 5,
         post_id: 4
     },
     {
-        comment_text: 'Praesentium in voluptatem magnam ab eius?',
+        comment_text: 'Never thought it could happen around here!',
         user_id: 2,
         post_id: 11
     },
     {
-        comment_text: 'Numquam quia perspiciatis fuga alias nesciunt itaque ab dolor id cupiditate.',
+        comment_text: 'Are they getting the help they need?',
         user_id: 4,
         post_id: 6
     },
     {
-        comment_text: 'Quidem, repellendus quae, dolorem accusamus facilis consequuntur optio ullam earum obcaecati deleniti temporibus ratione.',
+        comment_text: 'Shall we do something for them?',
         user_id: 9,
         post_id: 6
     },
     {
-        comment_text: 'Obcaecati sed rerum odio soluta?',
+        comment_text: 'What can we do for them?',
         user_id: 7,
         post_id: 9
     },
     {
-        comment_text: 'Consectetur facere, earum unde odio distinctio libero assumenda doloremque nisi suscipit adipisci iure.',
+        comment_text: 'Prayers I guess.',
         user_id: 4,
         post_id: 19
     },
     {
-        comment_text: 'Cum ipsa quasi pariatur voluptates perspiciatis quaerat magnam inventore?',
+        comment_text: 'How about donate some clothes and food?',
         user_id: 10,
         post_id: 1
     },
     {
-        comment_text: 'Saepe numquam modi, ea perferendis atque praesentium aspernatur!',
+        comment_text: 'Will that help?',
         user_id: 2,
         post_id: 19
     },
     {
-        comment_text: 'Fugit ducimus fugiat praesentium aliquid modi eius molestiae recusandae ratione, sapiente totam, velit tempore nobis?.',
+        comment_text: 'Maybe not much, but at least it is something.',
         user_id: 10,
         post_id: 1
     },
     {
-        comment_text: 'Nihil tempora facere sint repellendus dolor quasi sed, suscipit, provident id vero quas qui voluptatum?',
+        comment_text: 'Sure.',
         user_id: 10,
         post_id: 12
     }
