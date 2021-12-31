@@ -30,19 +30,19 @@ User.init({
         type: DataTypes.STRING,
         allowNull: true
     },
-    phoneNumber: {
-        type: DataTypes.DECIMAL(10),
-        allowNull: true,
-        validate: {
-            len: [10],
-            isInt: true
-        }
-    },
     // phoneNumber: {
-    //     type: DataTypes.STRING,
+    //     type: DataTypes.DECIMAL(10),
     //     allowNull: true,
-       
+    //     validate: {
+    //         len: [10],
+    //         isInt: true
+    //     }
     // },
+    phoneNumber: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+       
+    },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
