@@ -1,56 +1,65 @@
 # Emergency-Center
-
-#### Table of Contents
-- [Emergency-Center](#emergency-center)
-      - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Links](#links)
-  - [Technologies](#technologies)
-    - [Design](#design)
-  - [Node Dependencies](#node-dependencies)
-
+ 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ 
+ 
 
 ## Description
-![App Screenshot](./public/assets/images/home-snapshot.png)
-
 Emergency Center app is a forum for disaster and emergency incidents. You can view incidents that are reported for or near your current location. Sign-up to report first-hand accounts of the disaster or comment on posts to update the incident and add more information.
 
 Choose an avatar to display on your comments and posts on sign up.
 
 
 
-## Links
-Deployed at: Heroku link TBD
+## Table of Contents
+* [Installation](#installation)
+* [Built With](#builtwith)
+* [Usage](#usage)
+* [Website](#website)
+* [Credits](#credits)
+* [Questions](#questions)
 
-Repository at: https://github.com/flowingcityloy/Emergency-Center
 
-Report issues: https://github.com/flowingcityloy/Emergency-Center/issues 
+## Built With
+  * bcrypt
+  * connect-session-sequelize
+  * dotenv
+  * express
+  * express-handlebars package
+  * express-session
+  * mysql2
+  * nodemon
+  * sequelize 
+  * Semantic UI
 
-## Technologies
-This app is uses Express.js to store a MySQL database of posts, users and comments. We use Heroku as our runtime environment for our server. 
 
-### Design
-Semantic UI framework
+## Installation 
+  1. git clone git@github.com:flowingcityloy/Emergency-Center
+  2. npm i
 
-## Node Dependencies
-* axios
-* bcrypt
-* connect-session-sequelize
-* dotenv
-* express
-* express-handlebars
-* express-session
-* mysql2
-* node-fetch
-* sequelize
-* twilio
 
+
+## Usage 
+The following image demonstrates the web application's appearance and functionality:
+<p><img src=""/></p>
+
+
+
+## Websites
+[Repository](https://github.com/flowingcityloy/Emergency-Center)<br />
+[Live site](https://)
+
+
+
+## Credits
 Semantic UI<br>
 https://www.freelogodesign.org/ <br>
 google.com <br>
+https://www.nytimes.com/wirecutter/reviews/emergency-preparedness/ <br>
 David Barron<br>
-Robyn Graham<br>
 Joe Magannom<br>
-Lydia Loy
-    
+Lydia Loy<br>
+Robyn Graham
+
+
 
