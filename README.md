@@ -24,6 +24,18 @@ Choose an avatar to display on your comments and posts on sign up.
   2. npm i
 
 
+## Built With
+  * bcrypt
+  * connect-session-sequelize
+  * dotenv
+  * express
+  * express-handlebars package
+  * express-session
+  * mysql2
+  * nodemon
+  * sequelize 
+  * Semantic UI
+  
 
 ## Links
 Repository at: https://github.com/flowingcityloy/Emergency-Center
