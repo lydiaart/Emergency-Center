@@ -1,50 +1,48 @@
 # Emergency-Center
-
-#### Table of Contents
-- [Emergency-Center](#emergency-center)
-      - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Links](#links)
-  - [Technologies](#technologies)
-    - [Design](#design)
-  - [Node Dependencies](#node-dependencies)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Description
-![App Screenshot](./public/assets/images/home-snapshot.png)
-
 Emergency Center app is a forum for disaster and emergency incidents. You can view incidents that are reported for or near your current location. Sign-up to report first-hand accounts of the disaster or comment on posts to update the incident and add more information.
 
 Choose an avatar to display on your comments and posts on sign up.
 
 
 
-## Links
-Deployed at: Heroku link TBD
+## Table of Contents
+* [Installation](#installation)
+* [Built With](#builtwith)
+* [Usage](#usage)
+* [Website](#website)
+* [Credits](#credits)
+* [Questions](#questions)
 
+
+
+## Installation 
+  1. git clone git@github.com:flowingcityloy/Emergency-Center
+  2. npm i
+
+
+
+## Links
 Repository at: https://github.com/flowingcityloy/Emergency-Center
 
-Report issues: https://github.com/flowingcityloy/Emergency-Center/issues 
 
-## Technologies
-This app is uses Express.js to store a MySQL database of posts, users and comments. We use Heroku as our runtime environment for our server. 
 
-### Design
-Semantic UI framework
+## Usage 
+The following image demonstrates the web application's appearance and functionality:
+<p><img src=""/></p>
 
-## Node Dependencies
-* axios
-* bcrypt
-* connect-session-sequelize
-* dotenv
-* express
-* express-handlebars
-* express-session
-* mysql2
-* node-fetch
-* sequelize
-* twilio
 
+
+## Website
+[Repository](https://github.com/flowingcityloy/The-Tech-Blog)<br />
+[Live site](https://the-tech-blog-ll.herokuapp.com/)
+
+
+
+## Credits
 Semantic UI<br>
 https://www.freelogodesign.org/ <br>
 google.com <br>
