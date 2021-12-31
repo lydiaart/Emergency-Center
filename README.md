@@ -35,7 +35,7 @@ Choose an avatar to display on your comments and posts on sign up.
   * nodemon
   * sequelize 
   * Semantic UI
-  
+
 
 ## Links
 Repository at: https://github.com/flowingcityloy/Emergency-Center
@@ -49,8 +49,8 @@ The following image demonstrates the web application's appearance and functional
 
 
 ## Website
-[Repository](https://github.com/flowingcityloy/The-Tech-Blog)<br />
-[Live site](https://the-tech-blog-ll.herokuapp.com/)
+[Repository](https://github.com/flowingcityloy/Emergency-Center)<br />
+[Live site](https://emergency-center.herokuapp.com//)
 
 
 
