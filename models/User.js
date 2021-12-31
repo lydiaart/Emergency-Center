@@ -4,6 +4,7 @@ const {
 } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+// do we need this?
 const Sequelize = require('Sequelize');
 // create our User model
 class User extends Model {
@@ -23,17 +24,25 @@ User.init({
     },
     firstName: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     lastName: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     phoneNumber: {
-        type: DataTypes.STRING,
-        allowNull: false,
-       
+        type: DataTypes.DECIMAL(10),
+        allowNull: true,
+        validate: {
+            len: [10],
+            isInt: true
+        }
     },
+    // phoneNumber: {
+    //     type: DataTypes.STRING,
+    //     allowNull: true,
+       
+    // },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -52,17 +61,10 @@ User.init({
 
     avatar: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
 
-    phone: {
-        type: DataTypes.DECIMAL(10),
-        allowNull: true,
-        validate: {
-            len: [10],
-            isInt: true
-        }
-    }
+
   
 }, {
     hooks: {
