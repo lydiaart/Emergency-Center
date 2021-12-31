@@ -7,7 +7,8 @@
   - [Links](#links)
   - [Technologies](#technologies)
     - [Design](#design)
-  - [Node Dependencies](#node-dependencies)
+    - [Node Dependencies](#node-dependencies)
+  - [Credits](#credits)
 
 
 ## Description
@@ -27,7 +28,7 @@ Repository at: https://github.com/flowingcityloy/Emergency-Center
 Report issues: https://github.com/flowingcityloy/Emergency-Center/issues 
 
 ## Technologies
-This app is uses Express.js to store a MySQL database of posts, users and comments. We use Heroku as our runtime environment for our server. 
+This app uses Express.js to store a MySQL database of posts, users and comments. We use Heroku as our runtime environment for our server. 
 
 ### Design
 Semantic UI framework
@@ -45,12 +46,13 @@ Semantic UI framework
 * sequelize
 * twilio
 
-Semantic UI<br>
-https://www.freelogodesign.org/ <br>
-google.com <br>
+## Credits
+
 David Barron<br>
 Robyn Graham<br>
 Joe Magannom<br>
 Lydia Loy
-    
+
+Logo made with: https://www.freelogodesign.org/ 
+
 
