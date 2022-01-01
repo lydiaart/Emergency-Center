@@ -32,7 +32,7 @@ const postdata = [{
         user_id: 4,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "California's 7.1 earthquake–and how earthquakes work",
@@ -40,7 +40,7 @@ const postdata = [{
         user_id: 7,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "Climate change will boost risk of extreme flooding in northern Europe",
@@ -48,7 +48,7 @@ const postdata = [{
         user_id: 4,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "Hurricanes—Super Storms",
@@ -56,7 +56,7 @@ const postdata = [{
         user_id: 1,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "Hurricanes",
@@ -64,7 +64,7 @@ const postdata = [{
         user_id: 1,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "Storm",
@@ -72,7 +72,7 @@ const postdata = [{
         user_id: 9,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "BLIZZARD",
@@ -80,7 +80,7 @@ const postdata = [{
         user_id: 5,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "Traffic in Cities Is Rising but Still Largely Below Pre-Pandemic Levels",
@@ -88,7 +88,7 @@ const postdata = [{
         user_id: 3,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "4 people dead after terrible single-vehicle accident splits car in half",
@@ -96,7 +96,7 @@ const postdata = [{
         user_id: 10,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "Car accidents cause death, injury and trauma. Why do we shrug them off?",
@@ -104,7 +104,7 @@ const postdata = [{
         user_id: 8,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "One Killed, One Seriously Injured in Single Car Accident Caused by Speeding",
@@ -112,7 +112,7 @@ const postdata = [{
         user_id: 3,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "Waterloo police say missing child has been found",
@@ -120,7 +120,7 @@ const postdata = [{
         user_id: 3,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "A Story of Hope",
@@ -128,7 +128,7 @@ const postdata = [{
         user_id: 7,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "The most confounding missing children's case in Canadian history",
@@ -136,7 +136,7 @@ const postdata = [{
         user_id: 6,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "U.S. Marshals say they found 39 missing children in Georgia during two-week operation",
@@ -144,7 +144,7 @@ const postdata = [{
         user_id: 4,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unkown"
     },
     {
         title: "FROM BURNING SANDS TO BALTIC GAVEL: IMPRESSIONS FROM AN EVOLVING WARGAME",
