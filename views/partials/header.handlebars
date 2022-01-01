@@ -12,12 +12,14 @@
                 <div class="right item">
                     <a class="ui inverted button" href="/">Home</a>
                     <a class="ui inverted button" href="/view-posts">View Posts</a>
-                    <a class="ui inverted button" href="/login">Log in</a>
+                    {{#if loggedIn}}
+                        <button id="logout" class="ui inverted button">logout</button>
+                    {{else}}
+                        <a class="ui inverted button" href="/login">login</a>
+                    {{/if}}
                     <a class="ui inverted button" href="/signup">Sign Up</a>
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>

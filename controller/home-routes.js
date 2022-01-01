@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment } = require('../models');
+const { Post, User, Comment} = require('../models');
 
 router.get('/', (req, res) => {
     console.log('======================');
@@ -50,13 +50,13 @@ router.get('/view-posts', (req, res) => {
 
     console.log(posts);
 
-    res.render('view-posts', {posts})
+    res.render('view-posts', {posts, loggedIn: req.session.loggedIn })
    })
 
 });
 
 router.get('/create-post', (req, res) => {
-    res.render('create-post')
+    res.render('create-post', {loggedIn: req.session.loggedIn })
 });
 
 router.get('/about', (req, res) => {
