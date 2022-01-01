@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment} = require('../models');
+const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
     console.log('======================');
@@ -59,8 +59,8 @@ router.get('/create-post', (req, res) => {
     res.render('create-post', {loggedIn: req.session.loggedIn })
 });
 
-router.get('/about', (req, res) => {
-    res.render('about')
+router.get('/contact', (req, res) => {
+    res.render('contact')
 })
 
 

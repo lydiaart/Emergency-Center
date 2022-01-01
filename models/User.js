@@ -35,12 +35,7 @@ User.init({
             len: [10],
             isInt: true
         }
-    },
-    // phoneNumber: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: true,
-       
-    // },
+    }, 
     username: {
         type: DataTypes.STRING,
         allowNull: false,

@@ -70,7 +70,10 @@ router.post('/', (req, res) => {
     User.create({
             username: req.body.username,
             password: req.body.password,
-            phone: req.body.phone
+            phone: req.body.phone,
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            avatar: req.body.avatar
         })
         .then(dbUserData => {
             req.session.save(() => {

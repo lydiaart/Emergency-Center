@@ -5,17 +5,17 @@
 
       <form id="signup-form" class="ui form">
         <h4 class="ui dividing header">Signup Information</h4>
-        {{!-- <div class="field">
+        <div class="field">
           <label>Name</label>
           <div class="two fields">
             <div class="field">
-              <input type="text" id="first-name" name="first-name" placeholder="First Name">
+              <input type="text" id="firstName-signup" name="first-name" placeholder="First Name">
             </div>
             <div class="field">
-              <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+              <input type="text" id="lastName-signup" name="last-name" placeholder="Last Name">
             </div>
           </div>
-        </div> --}}
+        </div>
         <div class="field">
           <label>Username</label>
           <div class="fields">
@@ -40,10 +40,10 @@
             </div>
           </div>
         </div>
-        {{!-- <div class="three fields">
+        <div class="three fields">
           <div class="sixteen wide field">
             <label>Avatar</label>
-            <select class="ui fluid dropdown">
+            <select id="avatar-signup" class="ui fluid dropdown">
               <option value="">Avatar</option>
               <option value="https://semantic-ui.com/images/avatar/large/ade.jpg">Ade</option>
               <option value="https://semantic-ui.com/images/avatar/large/chris.jpg">Chris</option>
@@ -66,16 +66,14 @@
               <option value="https://semantic-ui.com/images/avatar/large/veronika.jpg">Veronika</option>
             </select>
           </div>
-        </div> --}}
+        </div>
         <button type="submit" class="ui primary button">
         Submit
       </button>
-      </form>
-
-      
-      {{!-- <button class="ui button">
+          <button class="ui button">
         Cancel
-      </button> --}}
+      </button>
+      </form>
 
     </div>
 
