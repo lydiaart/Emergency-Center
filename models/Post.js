@@ -39,7 +39,12 @@ Post.init({
             model: 'user',
             key: 'id'
         }
+    },
+    location: {
+        type: DataTypes.STRING,
+        allowNull: true
     }
+
 }, {
     sequelize,
     freezeTableName: true,

@@ -77,10 +77,10 @@ const userdata = [{
         avatar: 'https://semantic-ui.com//images/avatar/large/steve.jpg'
     },
     {
-        username: 'GhostFans',
+        //username: 'GhostFans',
         password: 'password123',
         phoneNumber: '212-785-3452',
-        firstName: 'Roger',
+        firstName: 'David',
         lastName: 'Ken',
         avatar: 'https://semantic-ui.com//images/avatar/large/joe.jpg',
         username: 'david',

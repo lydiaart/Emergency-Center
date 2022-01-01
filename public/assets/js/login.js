@@ -44,7 +44,10 @@ async function signupFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        //document.location.replace('/');
+        // history.back() -> equivelent to : history.go(-1)
+        // after user logs in, send them back to their original page/ previous page
+        location.replace(document.referrer);
       } else {
         alert(response.statusText);
       }
