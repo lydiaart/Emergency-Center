@@ -51,7 +51,7 @@ router.get('/view-posts', (req, res) => {
 
     console.log(posts);
 
-    res.render('view-posts', {posts})
+    res.render('view-posts', {posts, loggedIn: req.session.loggedIn })
    })
 
 

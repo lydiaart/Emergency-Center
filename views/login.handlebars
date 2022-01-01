@@ -8,21 +8,21 @@
         Log-in to your account
       </div>
     </h2>
-    <form class="ui large form">
+    <form class="ui large form login-form">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input type="text" name="username" placeholder="Username">
+            <input id="username-login" type="text" name="username" placeholder="Username">
           </div>
         </div>
         <div class="field">
           <div class="ui left icon input">
             <i class="lock icon"></i>
-            <input type="password" name="password" placeholder="Password">
+            <input id="password-login" type="password" name="password" placeholder="Password">
           </div>
         </div>
-        <div class="ui fluid large blue submit button">Login</div>
+        <button class="ui fluid large blue submit button">Login</button>
       </div>
 
       <div class="ui error message"></div>
@@ -34,3 +34,4 @@
     </div>
   </div>
 </div>
+<script src="/assets/js/login.js"></script>
