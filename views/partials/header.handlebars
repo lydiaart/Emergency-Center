@@ -4,15 +4,19 @@
             <div class="ui blue inverted pointing menu">
                 <div class="ui two column grid">
                     <div class="row">
-                        <div class="column">
-                            <img src="/assets/images/logo.png" alt="logo">
-                        </div>
+                        <a href="/" class="column">
+                            <img src="/assets/images/logo.png" class="image-link" alt="logo">
+                        </a>
                     </div>
                 </div>
                 <div class="right item">
                     <a class="ui inverted button" href="/">Home</a>
                     <a class="ui inverted button" href="/view-posts">View Posts</a>
-                    <a class="ui inverted button" href="/login">Log in</a>
+                    {{#if loggedIn}}
+                    <button id="logout" class="ui inverted button">logout</button>
+                    {{else}}
+                    <a class="ui inverted button" href="/login">login</a>
+                    {{/if}}
                     <a class="ui inverted button" href="/signup">Sign Up</a>
                 </div>
             </div>
