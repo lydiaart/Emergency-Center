@@ -15,7 +15,7 @@ function showComments(event){
 }
 
 // when the page loads, it automatically tries to look if any comments were ever pulled from the backend
-// than use logic to hide or unhide them.
+// then use logic to hide or unhide them.
 for (let i = 0; i < comment.length; i++) {
     comment[i].addEventListener("mouseover", showComments); 
     
