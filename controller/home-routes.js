@@ -58,7 +58,7 @@ router.get('/view-posts', (req, res) => {
 });
 
 router.get('/create-post', (req, res) => {
-    res.render('create-post')
+    res.render('create-post', {loggedIn: req.session.loggedIn })
 });
 
 router.get('/about', (req, res) => {
