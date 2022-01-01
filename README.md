@@ -31,24 +31,13 @@ Choose an avatar to display on your comments and posts on sign up.
   * nodemon
   * sequelize 
   * Semantic UI
+  * axios
 
 
 ## Installation 
   1. git clone git@github.com:flowingcityloy/Emergency-Center
   2. npm i
 
-
-## Built With
-  * bcrypt
-  * connect-session-sequelize
-  * dotenv
-  * express
-  * express-handlebars package
-  * express-session
-  * mysql2
-  * nodemon
-  * sequelize 
-  * Semantic UI
 
 
 ## Usage 
