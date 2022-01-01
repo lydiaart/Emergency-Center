@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
+const  withAuth = require('../utils/auth')
 
 router.get('/', (req, res) => {
     console.log('======================');
@@ -22,7 +23,7 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 });
 
-router.get('/comments', (req, res) => {
+router.get('/comments',  withAuth,(req, res) => {
     res.render('comments')
 });
 
@@ -55,7 +56,7 @@ router.get('/view-posts', (req, res) => {
 
 });
 
-router.get('/create-post', (req, res) => {
+router.get('/create-post',  withAuth,(req, res) => {
     res.render('create-post', {loggedIn: req.session.loggedIn })
 });
 
