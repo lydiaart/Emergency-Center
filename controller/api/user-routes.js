@@ -7,7 +7,6 @@ const {
 
 // get all users
 router.get('/', (req, res) => {
-    
     User.findAll({
             attributes: {
                 exclude: ['password']
@@ -36,12 +35,17 @@ router.get('/:id', (req, res) => {
                         'contents',
                         'latitude',
                         'longitude',
-                        'created_at'
+                        'created_at',
+                        'location'
                     ]
                 },
                 {
                     model: Comment,
-                    attributes: ['id', 'comment_text', 'created_at'],
+                    attributes: [
+                        'id',
+                        'comment_text',
+                        'created_at'
+                    ],
                     include: {
                         model: Post,
                         attributes: ['title']

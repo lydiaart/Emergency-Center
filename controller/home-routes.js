@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
+<<<<<<< HEAD
 const { Post, User, Comment } = require('../models');
 const axios = require('axios')
 
@@ -7,16 +8,24 @@ router.post('/comments', (req, res) => {
     //console.log(`in home-routes.js post_id ${req.body.post_id}`)
     res.json({post_id:req.body.post_id})
 });
+=======
+const {
+    Post,
+    User,
+    Comment
+} = require('../models');
+const withAuth = require('../utils/auth')
+>>>>>>> e299b2b71b32c74515366b6512d94a7493ccc18f
 
 router.get('/', (req, res) => {
     console.log('======================');
     //console.log(req.session);
     res.render('homepage', {
         loggedIn: req.session.loggedIn
-      });
-  });
+    });
+});
 
-  router.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.render('homepage')
 });
 
@@ -28,6 +37,7 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 });
 
+<<<<<<< HEAD
 //get all the comments, by pulling the post by id.
 router.get('/comments/:id', (req, res) => {
     const post_id = req.params.id
@@ -55,42 +65,50 @@ router.get('/comments/:id', (req, res) => {
 
 
 router.get('/comments', (req, res) => {
+=======
+router.get('/comments', withAuth, (req, res) => {
+>>>>>>> e299b2b71b32c74515366b6512d94a7493ccc18f
     res.render('comments')
 });
 
 
 
 router.get('/view-posts', (req, res) => {
-   Post.findAll({
-      include: [
-          {
-              model: Comment,
-              include: [
-                  {
-                      model: User,
-                  }
-              ]
-          },{
-              model: User,
-          }
-      ]
-   }) 
-   .then(postData => {
-     const posts = postData.map(post => {
-         return post.get({
-             plain: true
-         })
-     }) 
+    Post.findAll({
+            include: [{
+                model: Comment,
+                include: [{
+                    model: User,
+                }]
+            }, {
+                model: User,
+            }]
+        })
+        .then(postData => {
+            const posts = postData.map(post => {
+                return post.get({
+                    plain: true
+                })
+            })
 
+<<<<<<< HEAD
     //console.log(posts);
+=======
+            console.log(posts);
+>>>>>>> e299b2b71b32c74515366b6512d94a7493ccc18f
 
-    res.render('view-posts', {posts, loggedIn: req.session.loggedIn })
-   })
+            res.render('view-posts', {
+                posts,
+                loggedIn: req.session.loggedIn
+            })
+        })
 
 });
 
-router.get('/create-post', (req, res) => {
-    res.render('create-post', {loggedIn: req.session.loggedIn })
+router.get('/create-post', withAuth, (req, res) => {
+    res.render('create-post', {
+        loggedIn: req.session.loggedIn
+    })
 });
 
 router.get('/contact', (req, res) => {

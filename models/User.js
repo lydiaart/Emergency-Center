@@ -35,7 +35,7 @@ User.init({
             len: [10],
             isInt: true
         }
-    }, 
+    },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -51,14 +51,10 @@ User.init({
             len: [4]
         }
     },
-
     avatar: {
         type: DataTypes.STRING,
         allowNull: true
-    },
-
-
-  
+    }
 }, {
     hooks: {
         // set up beforeCreate lifecycle "hook" functionality
