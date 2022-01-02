@@ -17,5 +17,4 @@ function showComments(event) {
 // then use logic to hide or unhide them.
 for (let i = 0; i < comment.length; i++) {
     comment[i].addEventListener("mouseover", showComments);
-
 }
