@@ -32,13 +32,13 @@
         </form>
 </div>
 
-<div class="comment" data-post-id="{{post_id}}"></div>
+<div id="comments" data-post-id="{{post_id}}"></div>
 
 {{#each comments}}
 <div class="ui hidden divider" ></div>
 <div class="ui centered container">
     <div class="ui comments">
-        <div >
+        <div class="comment">
             <a class="avatar">
                 <img src="{{user.avatar}}">
             </a>

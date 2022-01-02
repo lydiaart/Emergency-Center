@@ -3,7 +3,7 @@ async function createComment(event){
     //window.alert("button tested")
     
     const comment_text = document.querySelector('#comment_text').value.trim();
-    const post_id = document.querySelector('.comment').getAttribute("data-post-id")
+    const post_id = document.querySelector('#comments').getAttribute("data-post-id")
     //const severity = document.querySelector('#severity').value
     
     //const user_id = 3;
