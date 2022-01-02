@@ -10,8 +10,8 @@ function showComments(event){
     }
     else{
        
-        //document.querySelector("#" + selector ).classList.add("hide")
-        //this.setAttribute("data-status","hide")
+        document.querySelector("#" + selector ).classList.add("hide")
+        this.setAttribute("data-status","hide")
         
     }
   

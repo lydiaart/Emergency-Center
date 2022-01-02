@@ -34,10 +34,10 @@
 
 
 {{#each comments}}
-<div class="ui hidden divider" data-post-id="{{post_id}}"></div>
+<div class="ui hidden divider" ></div>
 <div class="ui centered container">
     <div class="ui comments">
-        <div class="comment">
+        <div class="comment" data-post-id="{{post_id}}">
             <a class="avatar">
                 <img src="{{user.avatar}}">
             </a>
