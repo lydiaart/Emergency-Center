@@ -46,7 +46,7 @@ router.post('/', withAuth, (req, res) => {
             const MapAPiData = responseMapAPI.data
 
             // if a valid GPS coord is pulled, set the location
-            if(latitude && longitude)
+            if (latitude && longitude)
                 location = MapAPiData.results[4].formatted_address
             //console.log(`location  is ${JSON.stringify(location)}`)
             
