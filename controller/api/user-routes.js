@@ -35,7 +35,8 @@ router.get('/:id', (req, res) => {
                         'contents',
                         'latitude',
                         'longitude',
-                        'created_at'
+                        'created_at',
+                        'location'
                     ]
                 },
                 {
