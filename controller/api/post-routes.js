@@ -60,10 +60,6 @@ router.get('/:id', (req, res) => {
                 'longitude',
                 'created_at',
                 'location'
-<<<<<<< HEAD
-                
-=======
->>>>>>> e299b2b71b32c74515366b6512d94a7493ccc18f
             ],
             include: [{
                     model: Comment,
