@@ -1,17 +1,21 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment } = require('../models');
-const  withAuth = require('../utils/auth')
+const {
+    Post,
+    User,
+    Comment
+} = require('../models');
+const withAuth = require('../utils/auth')
 
 router.get('/', (req, res) => {
     console.log('======================');
     //console.log(req.session);
     res.render('homepage', {
         loggedIn: req.session.loggedIn
-      });
-  });
+    });
+});
 
-  router.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.render('homepage')
 });
 
@@ -23,41 +27,42 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 });
 
-router.get('/comments',  withAuth,(req, res) => {
+router.get('/comments', withAuth, (req, res) => {
     res.render('comments')
 });
 
 router.get('/view-posts', (req, res) => {
-   Post.findAll({
-      include: [
-          {
-              model: Comment,
-              include: [
-                  {
-                      model: User,
-                  }
-              ]
-          },{
-              model: User,
-          }
-      ]
-   }) 
-   .then(postData => {
-     const posts = postData.map(post => {
-         return post.get({
-             plain: true
-         })
-     }) 
+    Post.findAll({
+            include: [{
+                model: Comment,
+                include: [{
+                    model: User,
+                }]
+            }, {
+                model: User,
+            }]
+        })
+        .then(postData => {
+            const posts = postData.map(post => {
+                return post.get({
+                    plain: true
+                })
+            })
 
-    console.log(posts);
+            console.log(posts);
 
-    res.render('view-posts', {posts, loggedIn: req.session.loggedIn })
-   })
+            res.render('view-posts', {
+                posts,
+                loggedIn: req.session.loggedIn
+            })
+        })
 
 });
 
-router.get('/create-post',  withAuth,(req, res) => {
-    res.render('create-post', {loggedIn: req.session.loggedIn })
+router.get('/create-post', withAuth, (req, res) => {
+    res.render('create-post', {
+        loggedIn: req.session.loggedIn
+    })
 });
 
 router.get('/contact', (req, res) => {
