@@ -1,50 +1,59 @@
 .blue {
-    background-color: #003049 !important;
+  background-color: #003049 !important;
 }
+
 .footer {
-    position:fixed !important;
-    bottom:0 !important;
-    left:0 !important;
-    width: 100% !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
 }
-.margin-left{
-    margin-left: 10% !important;
+
+.margin-left {
+  margin-left: 10% !important;
 }
-html{
-    overflow-y:scroll ;
+
+html {
+  overflow-y: scroll;
 }
-body{   
-    position:absolute;
-    z-index: 3;
-    width: 100%;
+
+body {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
 }
-.hide{
-    display: none;
+
+.hide {
+  display: none;
 }
-.create-post-title{
-    text-align: right;
+
+.create-post-title {
+  text-align: right;
 }
-.comment{
-    color:#118ab2 !important;
-    font-family: Arial, Helvetica, sans-serif;
+
+.comment {
+  color: #118ab2 !important;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.contact{
-    color:white !important;
-    list-style: none;
+
+.contact {
+  color: white !important;
+  list-style: none;
 }
-.title{
-    color: white !important;
-    margin-top: 30px !important;
-    font-size: 40pt !important;
+
+.title {
+  color: white !important;
+  margin-top: 30px !important;
+  font-size: 40pt !important;
 }
 
 #myVideo {
-    position: absolute;
-    z-index: -1;
-    min-width: 100%; 
-    min-height: 100%;
-  }
-  .logolink{
-      width:100%;
-  }
-  
+  position: absolute;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.logolink {
+  width: 100%;
+}
