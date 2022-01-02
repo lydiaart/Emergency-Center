@@ -18,7 +18,7 @@ async function openCommentPage (event){
           if (response.ok) {
               //console.log('success, comment.js');
               //document.location.replace("/comments")
-              console.log(response)
+              //console.log(response)
               //document.location.replace('/comments');
               //response.render('comments',post_id)
 

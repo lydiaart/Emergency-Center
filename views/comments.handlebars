@@ -1,23 +1,11 @@
-{{!-- {{#each comments}}
-
-      <div class="comment" data-post-id="{{post_id}}">
-        <!--<a class="avatar">
-          <img src="{{user.avatar}}">
-        </a> -->
-        <div class="content">
-          <a class="author">{{user.firstName}} {{user.lastName}}</a>
-          <div class="metadata">
-            <span class="date">{{format_date createdAt}} </span>
-          </div>
-          <div class="text">
-            {{comment_text}}
-          </div>
-
-        </div>
-      </div>
-{{/each}} --}}
-
 <div class="ui centered container">
+<h2> {{posts.title}} | {{posts.location}}</h2>
+<p> {{posts.contents}} <br> wrote by {{posts.user.first_name}} {{posts.user.last_name}} on {{format_date posts.created_at}} </p>
+
+<b data-id="comment{{id}}" data-status="hide" class="comment"> comments({{comments.length}})</b>
+
+
+
 <form class="ui reply form ">
             <div class="field">
                 <textarea id="comment_text"></textarea>
@@ -45,7 +33,7 @@
             <div class="content">
                 <a class="author">{{user.firstName}} {{user.lastName}}</a>
                 <div class="metadata">
-                    <div class="date">{{format_date createdAt}}</div>
+                    <div class="date">{{format_date created_at}}</div>
                 </div>
                 <div class="text">
                     {{comment_text}}

@@ -42,7 +42,9 @@ router.get('/comments/:id', (req, res) => {
             'comments',
             {post_id:post_id,
             comments: response.data.comments,
-            loggedIn: req.session.loggedIn
+            loggedIn: req.session.loggedIn,
+            posts: response.data
+
 
         })
         

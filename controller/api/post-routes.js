@@ -77,7 +77,7 @@ router.get('/:id', (req, res) => {
                 },
                 {
                     model: User,
-                    attributes: ['username', 'phone']
+                    attributes: ['username', 'phone','first_name', 'last_name']
                 }
             ]
         })
