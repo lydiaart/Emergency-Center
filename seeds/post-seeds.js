@@ -8,7 +8,7 @@ const postdata = [{
         user_id: 10,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Dozens Are Killed as Tornadoes and Severe Weather Strike Southern States",
@@ -16,7 +16,7 @@ const postdata = [{
         user_id: 8,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Serious tsunami hits Greece and Turkey after 7.0 earthquake",
@@ -24,7 +24,7 @@ const postdata = [{
         user_id: 1,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Earthquakes",
@@ -32,7 +32,7 @@ const postdata = [{
         user_id: 4,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "California's 7.1 earthquake–and how earthquakes work",
@@ -40,7 +40,7 @@ const postdata = [{
         user_id: 7,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Climate change will boost risk of extreme flooding in northern Europe",
@@ -48,7 +48,7 @@ const postdata = [{
         user_id: 4,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Hurricanes—Super Storms",
@@ -56,7 +56,7 @@ const postdata = [{
         user_id: 1,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Hurricanes",
@@ -64,7 +64,7 @@ const postdata = [{
         user_id: 1,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Storm",
@@ -72,7 +72,7 @@ const postdata = [{
         user_id: 9,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "BLIZZARD",
@@ -80,7 +80,7 @@ const postdata = [{
         user_id: 5,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Traffic in Cities Is Rising but Still Largely Below Pre-Pandemic Levels",
@@ -88,7 +88,7 @@ const postdata = [{
         user_id: 3,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "4 people dead after terrible single-vehicle accident splits car in half",
@@ -96,7 +96,7 @@ const postdata = [{
         user_id: 10,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Car accidents cause death, injury and trauma. Why do we shrug them off?",
@@ -104,7 +104,7 @@ const postdata = [{
         user_id: 8,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "One Killed, One Seriously Injured in Single Car Accident Caused by Speeding",
@@ -112,7 +112,7 @@ const postdata = [{
         user_id: 3,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "Waterloo police say missing child has been found",
@@ -120,7 +120,7 @@ const postdata = [{
         user_id: 3,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "A Story of Hope",
@@ -128,7 +128,7 @@ const postdata = [{
         user_id: 7,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "The most confounding missing children's case in Canadian history",
@@ -136,7 +136,7 @@ const postdata = [{
         user_id: 6,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "U.S. Marshals say they found 39 missing children in Georgia during two-week operation",
@@ -144,7 +144,7 @@ const postdata = [{
         user_id: 4,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location unkown"
+        location: "location unknown"
     },
     {
         title: "FROM BURNING SANDS TO BALTIC GAVEL: IMPRESSIONS FROM AN EVOLVING WARGAME",
@@ -152,7 +152,7 @@ const postdata = [{
         user_id: 6,
         latitude: 36.7783,
         longitude: 119.4179,
-        location: "location location unkown"
+        location: "location unknown"
     },
     {
         title: "OVER-THE-HORIZON OPERATIONS PART II: WHERE MAY FORCE BE USED?",
@@ -161,8 +161,8 @@ const postdata = [{
         latitude: 36.7783,
         longitude: 119.4179,
         user_id: 10,
-        location: "location unkown"
-    } 
+        location: "location unknown"
+    }
 ];
 
 const seedPosts = () => Post.bulkCreate(postdata);
