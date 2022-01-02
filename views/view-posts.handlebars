@@ -10,10 +10,10 @@
   <div class="topic">
 
     <h2> {{title}} | {{location}}</h2>
-    <p> {{contents}} <br> wrote by {{user.firstName}} {{user.lastName}} on {{format_date createdAt}}  </p>
- 
+    <p> {{contents}} <br> wrote by {{user.firstName}} {{user.lastName}} on {{format_date createdAt}} </p>
+
     <b data-id="comment{{id}}" data-status="hide" class="comment"> comments({{comments.length}})</b>
- 
+
     <div id="comment{{id}}" class="ui comments hide">
       <h3 class="ui dividing header">Comments <a href="/comments"><i class="plus icon"></i> </a> </h3>
       {{#each comments}}
