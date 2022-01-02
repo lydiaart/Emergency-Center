@@ -10,7 +10,7 @@
   <div class="topic" >
 
     <h2> {{title}} | {{location}}</h2>
-    <p> {{contents}} <br> wrote by {{user.firstName}} {{user.lastName}} on {{format_date createdAt}} </p>
+    <p> {{contents}} <br> wrote by {{user.first_name}} {{user.last_name}} on {{format_date createdAt}} </p>
 
     <b data-id="comment{{id}}" data-status="hide" class="comment"> comments({{comments.length}})</b>
 
@@ -23,7 +23,7 @@
           <img src="{{user.avatar}}">
         </a>
         <div class="content">
-          <a class="author">{{user.firstName}} {{user.lastName}}</a>
+          <a class="author">{{user.first_name}} {{user.last_name}}</a>
           <div class="metadata">
             <span class="date">{{format_date createdAt}} </span>
           </div>
@@ -47,7 +47,7 @@
 
 <div class="ui hidden divider"></div>
 
-<script src="/assets/js/view-post.js"></script>
 {{#if posts}}
+<script src="/assets/js/view-post.js"></script>
 <script src="/assets/js/comment.js"></script>
 {{/if}}

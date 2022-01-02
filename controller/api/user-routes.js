@@ -75,8 +75,8 @@ router.post('/', (req, res) => {
             username: req.body.username,
             password: req.body.password,
             phone: req.body.phone,
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
             avatar: req.body.avatar
         })
         .then(dbUserData => {

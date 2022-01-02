@@ -6,7 +6,7 @@ function showComments(event) {
     if (status === "hide") {
         document.querySelector("#" + selector).classList.remove("hide")
         this.setAttribute("data-status", "show")
-    } else {
+    } else if(status === "show") {
         document.querySelector("#" + selector).classList.add("hide")
         this.setAttribute("data-status", "hide")
     }
