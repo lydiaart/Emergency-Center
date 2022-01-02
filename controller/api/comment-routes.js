@@ -16,6 +16,12 @@ router.post('/', withAuth, (req, res) => {
             console.log(err);
             res.status(400).json(err);
         });
+
+
 });
+
+router.get('/view-posts"', withAuth ,(req, res)=> {
+    res.render("view-posts")
+})
 
 module.exports = router;

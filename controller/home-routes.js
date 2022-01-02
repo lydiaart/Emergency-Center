@@ -1,6 +1,12 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
+const axios = require('axios')
+
+router.post('/comments', (req, res) => {
+    //console.log(`in home-routes.js post_id ${req.body.post_id}`)
+    res.json({post_id:req.body.post_id})
+});
 
 router.get('/', (req, res) => {
     console.log('======================');
@@ -22,9 +28,37 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 });
 
+//get all the comments, by pulling the post by id.
+router.get('/comments/:id', (req, res) => {
+    const post_id = req.params.id
+    let url = `http://localhost:3001/api/posts/${post_id}`
+    axios({
+        method:'get',
+        url : url,
+      }).then(response => {
+        
+        //console.log(`\n\n\n\n\n\ \t\t\t\t\ postData.comments ${JSON.stringify(response.data)}`)
+        res.render(
+            'comments',
+            {post_id:post_id,
+            comments: response.data.comments,
+            loggedIn: req.session.loggedIn
+
+        })
+        
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    
+});
+
+
 router.get('/comments', (req, res) => {
     res.render('comments')
 });
+
+
 
 router.get('/view-posts', (req, res) => {
    Post.findAll({

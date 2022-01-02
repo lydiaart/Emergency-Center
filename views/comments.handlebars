@@ -1,37 +1,63 @@
-<div class="ui hidden divider"></div>
+{{!-- {{#each comments}}
+
+      <div class="comment" data-post-id="{{post_id}}">
+        <!--<a class="avatar">
+          <img src="{{user.avatar}}">
+        </a> -->
+        <div class="content">
+          <a class="author">{{user.firstName}} {{user.lastName}}</a>
+          <div class="metadata">
+            <span class="date">{{format_date createdAt}} </span>
+          </div>
+          <div class="text">
+            {{comment_text}}
+          </div>
+
+        </div>
+      </div>
+{{/each}} --}}
+
+<div class="ui centered container">
+<form class="ui reply form ">
+            <div class="field">
+                <textarea id="comment_text"></textarea>
+            </div>
+            <a href="/view-posts" class="ui secondory submit button">
+                View Postings
+            </a>
+
+            <button class="ui primary submit labeled icon button comment-form">
+                <i class="icon edit"></i> Add Comment
+            </button>
+        </form>
+</div>
+
+
+{{#each comments}}
+<div class="ui hidden divider" data-post-id="{{post_id}}"></div>
 <div class="ui centered container">
     <div class="ui comments">
         <div class="comment">
             <a class="avatar">
-                <img src="https://semantic-ui.com/images/avatar/large/matt.jpg">
+                <img src="{{user.avatar}}">
             </a>
             <div class="content">
-                <a class="author">William George</a>
+                <a class="author">{{user.firstName}} {{user.lastName}}</a>
                 <div class="metadata">
-                    <div class="date">1 day ago</div>
+                    <div class="date">{{format_date createdAt}}</div>
                 </div>
                 <div class="text">
-                    <p>The hours, minutes and seconds stand as visible reminders that your effort put them all there.
-                    </p>
-                    <p>Preserve until your next run, when the watch lets you see how Impermanent your efforts are.</p>
+                    {{comment_text}}
                 </div>
                 <div class="actions">
                     <a class="reply">Reply</a>
                 </div>
             </div>
         </div>
-        <form class="ui reply form">
-            <div class="field">
-                <textarea></textarea>
-            </div>
-            <a href="/view-posts" class="ui secondory submit button">
-                View Postings
-            </a>
-
-            <div class="ui primary submit labeled icon button">
-                <i class="icon edit"></i> Add Comment
-            </div>
-        </form>
+        {{/each}}
+        
     </div>
 </div>
+
 <div class="ui hidden divider"></div>
+<script src="/assets/js/create-comment.js"></script>

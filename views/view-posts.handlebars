@@ -7,7 +7,7 @@
 
   {{#each posts}}
   <div class="ui hidden divider"></div>
-  <div class="topic">
+  <div class="topic" >
 
     <h2> {{title}} | {{location}}</h2>
     <p> {{contents}} <br> wrote by {{user.firstName}} {{user.lastName}} on {{format_date createdAt}}  </p>
@@ -15,7 +15,7 @@
     <b data-id="comment{{id}}" data-status="hide" class="comment"> comments({{comments.length}})</b>
  
     <div id="comment{{id}}" class="ui comments hide">
-      <h3 class="ui dividing header">Comments <a href="/comments"><i class="plus icon"></i> </a> </h3>
+      <h3 class="ui dividing header">Comments <button data-post-id="{{id}}" class="comments-dropdown"><i class="plus icon"></i> </button> </h3>
       {{#each comments}}
 
       <div class="comment">
@@ -33,7 +33,7 @@
 
         </div>
       </div>
-
+      
       {{/each}}
     </div>
 
@@ -48,3 +48,6 @@
 <div class="ui hidden divider"></div>
 
 <script src="/assets/js/view-post.js"></script>
+{{#if posts}}
+<script src="/assets/js/comment.js"></script>
+{{/if}}

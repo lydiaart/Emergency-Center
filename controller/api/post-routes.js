@@ -51,7 +51,9 @@ router.get('/:id', (req, res) => {
                 'title',
                 'latitude',
                 'longitude',
-                'created_at'
+                'created_at',
+                'location'
+                
             ],
             include: [{
                     model: Comment,
@@ -64,7 +66,7 @@ router.get('/:id', (req, res) => {
                     ],
                     include: {
                         model: User,
-                        attributes: ['username', 'phone']
+                        attributes: ['username', 'phone', 'firstName', 'lastName','avatar']
                     }
                 },
                 {
