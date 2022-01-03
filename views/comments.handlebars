@@ -1,29 +1,28 @@
 <div class="ui centered container">
-<h2> {{posts.title}} | {{posts.location}}</h2>
-<p> {{posts.contents}} <br> wrote by {{posts.user.first_name}} {{posts.user.last_name}} on {{format_date posts.created_at}} </p>
+    <h2> {{posts.title}} | {{posts.location}}</h2>
+    <p> {{posts.contents}} <br> wrote by {{posts.user.first_name}} {{posts.user.last_name}} on {{format_date
+        posts.created_at}}
+    </p>
+    <b data-id="comment{{id}}" data-status="hide" class="comment"> comments({{comments.length}})
+    </b>
 
-<b data-id="comment{{id}}" data-status="hide" class="comment"> comments({{comments.length}})</b>
-
-
-
-<form class="ui reply form ">
-            <div class="field">
-                <textarea id="comment_text"></textarea>
-            </div>
-            <a href="/view-posts" class="ui secondory submit button">
-                View Postings
-            </a>
-
-            <button class="ui primary submit labeled icon button comment-form">
-                <i class="icon edit"></i> Add Comment
-            </button>
-        </form>
+    <form class="ui reply form ">
+        <div class="field">
+            <textarea id="comment_text"></textarea>
+        </div>
+        <a href="/view-posts" class="ui secondory submit button">
+            View Postings
+        </a>
+        <button class="ui primary submit labeled icon button comment-form">
+            <i class="icon edit"></i> Add Comment
+        </button>
+    </form>
 </div>
 
 <div id="comments" data-post-id="{{post_id}}"></div>
 
 {{#each comments}}
-<div class="ui hidden divider" ></div>
+<div class="ui hidden divider"></div>
 <div class="ui centered container">
     <div class="ui comments">
         <div class="comment">
@@ -44,7 +43,6 @@
             </div>
         </div>
         {{/each}}
-        
     </div>
 </div>
 <div class="ui hidden divider"></div>

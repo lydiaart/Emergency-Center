@@ -4,7 +4,7 @@ const {
 
 const postdata = [{
         title: "Wildfire nightmare captured in harrowing image of California burning",
-        contents: "THIS is what a US wildfire looks like up close. Trees and embers burn on the other side of the Bidwell Bar Bridge, which spans California’s Lake Oroville in Butte county. These appear white in the image, while the lights to the right are from a small boat.",
+        contents: "THIS is what a US wildfire looks like up close. Trees and embers burn on the other side of the Bidwell Bar Bridge, which spans California's Lake Oroville in Butte county. These appear white in the image, while the lights to the right are from a small boat.",
         user_id: 10,
         latitude: 36.7783,
         longitude: 119.4179,
@@ -35,7 +35,7 @@ const postdata = [{
         location: "location unknown"
     },
     {
-        title: "California's 7.1 earthquake–and how earthquakes work",
+        title: "California's 7.1 earthquake-and how earthquakes work",
         contents: "A powerful magnitude 7.1 temblor rocked Southern California at 8:19 PT on July 5, 2019, just 34 hours after a magnitude 6.4 earthquake hit the same region. This is the largest in decades, with the last temblor this large—the magnitude 7.1 Hector Mine earthquake—striking the Mojave Desert in 1999.",
         user_id: 7,
         latitude: 36.7783,
@@ -44,7 +44,7 @@ const postdata = [{
     },
     {
         title: "Climate change will boost risk of extreme flooding in northern Europe",
-        contents: "A flood happens when water overflows or soaks land that is normally dry. There are few places on Earth where people don’t need to be concerned about flooding.",
+        contents: "A flood happens when water overflows or soaks land that is normally dry. There are few places on Earth where people don't need to be concerned about flooding.",
         user_id: 4,
         latitude: 36.7783,
         longitude: 119.4179,
@@ -84,7 +84,7 @@ const postdata = [{
     },
     {
         title: "Traffic in Cities Is Rising but Still Largely Below Pre-Pandemic Levels",
-        contents: "Traffic congestion around the U.S. is creeping back up but remains lighter than before the pandemic, according to a new analysis, a result of many workers not yet returning to the office full time despite many officials’ efforts to get people back into core business districts.",
+        contents: "Traffic congestion around the U.S. is creeping back up but remains lighter than before the pandemic, according to a new analysis, a result of many workers not yet returning to the office full time despite many officials' efforts to get people back into core business districts.",
         user_id: 3,
         latitude: 36.7783,
         longitude: 119.4179,
@@ -92,7 +92,7 @@ const postdata = [{
     },
     {
         title: "4 people dead after terrible single-vehicle accident splits car in half",
-        contents: "Four people have died and two people have been injured in a terrible single-vehicle accident that ended up splitting their car in half.The incident occurred at approximately 2:24 p.m. on Saturday, July 17, in Hickory Hills, Illinois, when police say a car with six people inside ended up losing control and striking a tree, according to a report from ABC News’ Chicago station WLS.",
+        contents: "Four people have died and two people have been injured in a terrible single-vehicle accident that ended up splitting their car in half.The incident occurred at approximately 2:24 p.m. on Saturday, July 17, in Hickory Hills, Illinois, when police say a car with six people inside ended up losing control and striking a tree, according to a report from ABC News' Chicago station WLS.",
         user_id: 10,
         latitude: 36.7783,
         longitude: 119.4179,
@@ -100,7 +100,7 @@ const postdata = [{
     },
     {
         title: "Car accidents cause death, injury and trauma. Why do we shrug them off?",
-        contents: "Americans don’t always fear the things we should.This summer, my dad visited us every week in the Pacific Northwest to play with the grandkids, and every week I could predict what his complaints would be: The record-breaking heat in the area was aggravating him, as was the chronic pain in his back — a deep ache still lingering from a major car accident two years ago. The common cause in these events was not lost on me.",
+        contents: "Americans don't always fear the things we should.This summer, my dad visited us every week in the Pacific Northwest to play with the grandkids, and every week I could predict what his complaints would be: The record-breaking heat in the area was aggravating him, as was the chronic pain in his back — a deep ache still lingering from a major car accident two years ago. The common cause in these events was not lost on me.",
         user_id: 8,
         latitude: 36.7783,
         longitude: 119.4179,
@@ -132,7 +132,7 @@ const postdata = [{
     },
     {
         title: "The most confounding missing children's case in Canadian history",
-        contents: "Michael disappeared at the peak of a trend in rising crime that had been hitting Canada since the 1960s. In between 1983 and 1992, Canada’s rate of child abductions increased by 65 per cent. But unlike most of those disappearances, there were no family members within the Dunahee family with designs on abducting Michael. And while B.C. in this era was cursed by the occasional serial killer targeting children, none were known to be in the vicinity of Vancouver Island at this time.",
+        contents: "Michael disappeared at the peak of a trend in rising crime that had been hitting Canada since the 1960s. In between 1983 and 1992, Canada's rate of child abductions increased by 65 per cent. But unlike most of those disappearances, there were no family members within the Dunahee family with designs on abducting Michael. And while B.C. in this era was cursed by the occasional serial killer targeting children, none were known to be in the vicinity of Vancouver Island at this time.",
         user_id: 6,
         latitude: 36.7783,
         longitude: 119.4179,
