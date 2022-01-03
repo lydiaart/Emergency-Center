@@ -58,17 +58,12 @@ body {
   width: 100%;
 }
 
+/*to match backgorund of header*/
 .ui.inverted.menu {
   background: #003049;
 }
 
-/* for mobile menu */
-#content {
-  min-height: 100px;
-}
-.ui.grid{
-  padding: 0 !important;
-}
-.pushable.segment{
-  margin: 0 !important;
+/*for login modal*/
+.column.login {
+  max-width: 400px;
 }
