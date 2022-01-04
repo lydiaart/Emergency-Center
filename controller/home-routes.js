@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
-const axios = require('axios')
+const axios = require('axios');
+const withAuth = require('../utils/auth')
 
 router.post('/comments', (req, res) => {
     res.json({post_id:req.body.post_id})
@@ -30,7 +31,7 @@ router.get('/signup', (req, res) => {
 });
 
 //get all the comments, by pulling the post by id.
-router.get('/comments/:id', (req, res) => {
+router.get('/comments/:id', withAuth, (req, res) => {
     const post_id = req.params.id
     let url = `http://localhost:3001/api/posts/${post_id}`
     axios({
@@ -55,7 +56,7 @@ router.get('/comments/:id', (req, res) => {
     
 });
 
-router.get('/comments', (req, res) => {
+router.get('/comments', withAuth, (req, res) => {
     res.render('comments')
 });
 
@@ -84,7 +85,7 @@ router.get('/view-posts', (req, res) => {
         })
 });
 
-router.get('/create-post', (req, res) => {
+router.get('/create-post', withAuth, (req, res) => {
     res.render('create-post', {
         loggedIn: req.session.loggedIn
     })
