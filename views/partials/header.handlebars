@@ -1,25 +1,28 @@
 <div class="pusher">
     <div class="ui blue vertical masthead center aligned segment">
         <div class="ui container">
-            <div class="ui blue inverted pointing menu">
-                <div class="ui two column grid">
-                    <div class="row">
-                        <a href="/" class="column">
-                            <img src="/assets/images/logo.png" class="image-link" alt="logo">
-                        </a>
-                    </div>
+
+            <div class="ui stackable menu inverted">
+                <div class="item">
+                    <a href="/">
+                        <img src="/assets/images/logo.png" height="90px" width="90px" alt="logo">
+                    </a>
                 </div>
-                <div class="right item">
-                    <a class="ui inverted button" href="/">Home</a>
-                    <a class="ui inverted button" href="/view-posts">View Posts</a>
+
+                <div class="right menu">
+                    <a class=" item" href="/">Home</a>
+                    <a class=" item" href="/view-posts">View Posts</a>
                     {{#if loggedIn}}
-                    <button id="logout" class="ui inverted button">logout</button>
+                    <button id="logout" class=" item">Logout</button>
                     {{else}}
-                    <a class="ui inverted button" href="/login">login</a>
-                    <a class="ui inverted button" href="/signup">Sign Up</a>
+                    <a class=" item" href="/login">Login</a>
+                    <a class=" item" href="/signup">Sign Up</a>
                     {{/if}}
+
                 </div>
+
             </div>
+
         </div>
     </div>
 </div>

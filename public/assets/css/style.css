@@ -2,13 +2,6 @@
   background-color: #003049 !important;
 }
 
-.footer {
-  position: fixed !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-}
-
 .margin-left {
   margin-left: 10% !important;
 }
@@ -56,4 +49,41 @@ body {
 
 .logolink {
   width: 100%;
+}
+
+/*to match backgorund of header*/
+.ui.inverted.menu {
+  background: #003049;
+}
+
+/*for login modal*/
+.column.login {
+  max-width: 400px;
+}
+
+/* hide lines on menu */
+.ui.menu .item:before {
+  width: 0px;
+}
+
+/*to keep footer from overlapping with content - margin bottom*/
+#page-container {
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: 50px;
+}
+
+/*removes negative margin of -1rem, causes overlapping with footer*/
+.ui.grid {
+  margin-bottom: 0 !important;
+}
+
+/*fixed footer with margin*/
+.footer {
+  position: fixed !important;
+  margin-top: 50px !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  color: white;
 }
