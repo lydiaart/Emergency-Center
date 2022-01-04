@@ -55,7 +55,6 @@ The following image demonstrates the web application's appearance and functional
 ## Credits
 Semantic UI<br/>
 https://www.freelogodesign.org/ <br/>
-google.com <br>
 https://www.nytimes.com/wirecutter/reviews/emergency-preparedness/ <br/>
 Robyn Graham<br/>
 David Barron<br/>
