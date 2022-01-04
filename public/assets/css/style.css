@@ -4,10 +4,11 @@
 
 .footer {
   /* position: fixed !important; */
-  margin-top: 20px;
+  margin-top: 50px;
   bottom: 0 !important;
   left: 0 !important;
   width: 100% !important;
+  color: white;
 }
 
 .margin-left {
@@ -67,4 +68,9 @@ body {
 /*for login modal*/
 .column.login {
   max-width: 400px;
+}
+
+/* hide lines on menu */
+.ui.menu .item:before {
+  width: 0px;
 }
