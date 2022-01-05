@@ -2,6 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const axios = require('axios')
+require('dotenv').config()
 
 router.post('/comments', (req, res) => {
     res.json({post_id:req.body.post_id})
@@ -32,7 +33,7 @@ router.get('/signup', (req, res) => {
 //get all the comments, by pulling the post by id.
 router.get('/comments/:id', (req, res) => {
     const post_id = req.params.id
-    let url = `http://localhost:3001/api/posts/${post_id}`
+    let url = `${process.env.URL}/api/posts/${post_id}`
     axios({
         method:'get',
         url : url,
