@@ -40,7 +40,8 @@ router.post('/', withAuth, (req, res) => {
                  const post_title = axios_post_data.data.title
                  const post_contents = axios_post_data.contents
                  const post_location = axios_post_data.location
-                 const link_to_text = `${post_link_twillio}/${post_id}`
+                 // creates link to post for text messages 
+                 const link_to_text = `${process.env.URL}/${post_id}`
 
                  const comments = a_post.comments
                  comments.map(a_comment => phones_to_text_hash[a_comment.user.phone] = a_comment.user.phone) 
