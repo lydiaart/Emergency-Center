@@ -88,6 +88,7 @@ body {
   color: white;
 }
 
+/* to remove extra padding on mobile footer when menu stacked*/
 @media only screen and (max-width: 767px){
 .ui.stackable.divided:not(.vertically).grid>.row>.column {
   padding-top: 0!important;
