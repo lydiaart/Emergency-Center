@@ -1,8 +1,9 @@
-let post_link_twillio = process.env.post_link_twillio;
+//let post_link_twillio = process.env.post_link_twillio;
 const twillioAccountSid = process.env.twillioAccountSid;
 const TwillioAuthToken = process.env.TwillioAuthToken;
 const twillioFromNumber = process.env.twillioFromNumber;
 const clientTwillio = require('twilio')(twillioAccountSid, TwillioAuthToken);
+require('dotenv').config()
 
 const router = require('express').Router();
 const axios = require('axios')
@@ -27,7 +28,7 @@ router.post('/', withAuth, (req, res) => {
             // text the users and lastly send data back to client 
 
              // send text messages
-             const url = `http://localhost:3001/api/posts/${post_id}`
+             const url = `${process.env.URL}/api/posts/${post_id}`
              let phones_to_text_hash = {}
              axios({
                  // axios call to pull post, to obtain list of users
@@ -39,7 +40,8 @@ router.post('/', withAuth, (req, res) => {
                  const post_title = axios_post_data.data.title
                  const post_contents = axios_post_data.contents
                  const post_location = axios_post_data.location
-                 const link_to_text = `${post_link_twillio}/${post_id}`
+                 // creates link to post for text messages 
+                 const link_to_text = `${process.env.URL}/comments/${post_id}`
 
                  const comments = a_post.comments
                  comments.map(a_comment => phones_to_text_hash[a_comment.user.phone] = a_comment.user.phone) 

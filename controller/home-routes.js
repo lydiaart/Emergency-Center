@@ -33,7 +33,7 @@ router.get('/signup', (req, res) => {
 //get all the comments, by pulling the post by id.
 router.get('/comments/:id', withAuth, (req, res) => {
     const post_id = req.params.id
-    let url = `http://localhost:3001/api/posts/${post_id}`
+    let url = `${process.env.URL}/api/posts/${post_id}`
     axios({
         method:'get',
         url : url,
