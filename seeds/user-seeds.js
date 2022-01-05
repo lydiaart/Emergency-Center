@@ -7,86 +7,83 @@ const {
 const userdata = [{
         username: 'WhoKnows',
         password: 'password123',
-        phoneNumber: '919-242-6666',
-        firstName: 'David',
-        lastName: 'Barn',
+        phone: '9192426666',
+        first_name: 'David',
+        last_name: 'Barn',
         avatar: 'https://semantic-ui.com/images/avatar/large/christian.jpg'
     },
     {
         username: 'God-Forbid',
         password: 'password123',
-        phoneNumber: '660-244-5556',
-        firstName: 'Nick',
-        lastName: 'Las',
+        phone: '6602445556',
+        first_name: 'Nick',
+        last_name: 'Las',
         avatar: 'https://semantic-ui.com/images/avatar/large/chris.jpg'
     },
     {
         username: 'Rightnow',
         password: 'password123',
-        phoneNumber: '330-784-2440',
-        firstName: 'Stephen',
-        lastName: 'Job',
+        phone: '3307842440',
+        first_name: 'Stephen',
+        last_name: 'Job',
         avatar: 'https://semantic-ui.com//images/avatar/large/elliot.jpg'
     },
     {
         username: 'RecallMemories',
         password: 'password123',
-        phoneNumber: '313-998-0007',
-        firstName: 'Rosanne',
-        lastName: 'Han',
+        phone: '3139980007',
+        first_name: 'Rosanne',
+        last_name: 'Han',
         avatar: 'https://semantic-ui.com/images/avatar/large/helen.jpg'
     },
     {
         username: 'DamnGood',
         password: 'password123',
-        phoneNumber: '112-566-1234',
-        firstName: 'Marvin',
-        lastName: 'Bruce',
+        phone: '1125661234',
+        first_name: 'Marvin',
+        last_name: 'Bruce',
         avatar: 'https://semantic-ui.com/images/avatar2/large/elyse.png'
     },
     {
         username: 'WhoIsWilliam',
         password: 'password123',
-        phoneNumber: '917-856-2341',
-        firstName: 'William',
-        lastName: 'Geroge',
+        phone: '9178562341',
+        first_name: 'William',
+        last_name: 'Geroge',
         avatar: 'https://semantic-ui.com/images/avatar/large/matt.jpg'
     },
     {
         username: 'seriouslyCrazy',
         password: 'password123',
-        phoneNumber: '414-777-1221',
-        firstName: 'Henry',
-        lastName: 'Brown',
+        phone: '4147771221',
+        first_name: 'Henry',
+        last_name: 'Brown',
         avatar: 'https://semantic-ui.com/images/avatar2/large/patrick.png'
     },
     {
         username: 'KoreanDrama',
         password: 'password123',
-        phoneNumber: '633-122-3895',
-        firstName: 'Cindy',
-        lastName: 'Ron',
+        phone: '6331223895',
+        first_name: 'Cindy',
+        last_name: 'Ron',
         avatar: 'https://semantic-ui.com//images/avatar/large/jenny.jpg'
     },
     {
         username: 'zumbieBite',
         password: 'password123',
-        phoneNumber: '243-190-8956',
-        firstName: 'Blake',
-        lastName: 'Water',
+        phone: '2431908956',
+        first_name: 'Blake',
+        last_name: 'Water',
         avatar: 'https://semantic-ui.com//images/avatar/large/steve.jpg'
     },
     {
-        username: 'GhostFans',
-        password: 'password123',
-        phoneNumber: '212-785-3452',
-        firstName: 'Roger',
-        lastName: 'Ken',
+        first_name: 'David',
+        last_name: 'Ken',
         avatar: 'https://semantic-ui.com//images/avatar/large/joe.jpg',
         username: 'david',
         password: 'password123',
         phone: 9167529927
-    } 
+    }
 ];
 
 const seedUsers = () => User.bulkCreate(userdata, {

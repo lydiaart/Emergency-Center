@@ -5,9 +5,7 @@ const {
 const sequelize = require('../config/connection');
 
 // create our Post model
-class Post extends Model {
- 
-}
+class Post extends Model {}
 
 // create fields/columns for Post model
 Post.init({
@@ -39,6 +37,10 @@ Post.init({
             model: 'user',
             key: 'id'
         }
+    },
+    location: {
+        type: DataTypes.STRING,
+        allowNull: true
     }
 }, {
     sequelize,

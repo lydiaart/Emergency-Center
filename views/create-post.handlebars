@@ -1,24 +1,25 @@
 <div class="ui hidden divider"></div>
-
 <div class="ui centered container">
     <h3>Create New Post</h3>
     <div class="ui comments">
-       
-        <form class="ui reply form">
+        <form class="ui reply form post-form">
             <div class="field">
-              <input type="text" id="title" name="title" placeholder="Title">
+                <input type="text" id="title" name="title" placeholder="Title">
             </div>
             <div class="field">
-
-                <textarea></textarea>
+                <textarea id="contents"></textarea>
             </div>
             <a href="/view-posts" class="ui secondory submit button">
                 View Postings
             </a>
-
-            <div class="ui primary submit labeled icon button">
+            {{#if loggedIn}}
+            <button class="ui primary submit labeled icon button">
                 <i class="icon edit"></i> Add Post
-            </div>
+            </button>
+            <script src="/assets/js/create-posts.js"></script>
+            {{else}}
+            <a class="ui primary submit labeled icon button" href="/login">Please login first </a>
+            {{/if}}
         </form>
     </div>
 </div>
