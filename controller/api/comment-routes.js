@@ -1,4 +1,4 @@
-let post_link_twillio = process.env.post_link_twillio;
+//let post_link_twillio = process.env.post_link_twillio;
 const twillioAccountSid = process.env.twillioAccountSid;
 const TwillioAuthToken = process.env.TwillioAuthToken;
 const twillioFromNumber = process.env.twillioFromNumber;
@@ -41,7 +41,7 @@ router.post('/', withAuth, (req, res) => {
                  const post_contents = axios_post_data.contents
                  const post_location = axios_post_data.location
                  // creates link to post for text messages 
-                 const link_to_text = `${process.env.URL}/${post_id}`
+                 const link_to_text = `${process.env.URL}/comments/${post_id}`
 
                  const comments = a_post.comments
                  comments.map(a_comment => phones_to_text_hash[a_comment.user.phone] = a_comment.user.phone) 
