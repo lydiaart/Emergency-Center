@@ -35,6 +35,7 @@ router.post('/', withAuth, (req, res) => {
     let data;
 
     const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${googleApiKey}`
+
     console.log(`url is ${url}`)
     
         axios({

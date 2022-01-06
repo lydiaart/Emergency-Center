@@ -30,8 +30,8 @@ async function submitPost(event) {
   const longitude = localStorage.getItem("longitude");
 
 
-  //if (title && contents && latitude && longitude) {
-  if (title && contents) {
+  if (title && contents && latitude && longitude) {
+  //if (title && contents) {
     const response = await fetch("/create-post/", {
       method: "post",
       body: JSON.stringify({
@@ -56,7 +56,7 @@ async function submitPost(event) {
     //--------------
   }
   else
-    window.alert(`Missing Fields: \n please add a title and description.`)
+    window.alert(`Missing Fields: \n please add a title and description and/or turn on location tracking`)
   //  window.alert("Please turn on location tracking \n in your browser and PC settings to Post!")
 }
 
