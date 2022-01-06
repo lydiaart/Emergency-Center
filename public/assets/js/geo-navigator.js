@@ -8,12 +8,23 @@ mapLink.href = '';
 mapLink.textContent = '';
 
 function success(position) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
-  console.log(`position ${JSON.stringify(position.coords.latitude)}`);
+
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+
+  if(latitude) // if lat is valid let the value be assigned
+    latitude = latitude;
+  else // else we could not pull the lat, assign something valid by default
+    latitude=36.77;
+
+  if(longitude) 
+    longitude=longitude
+  else
+    longitude = 119.41;
+  //console.log(`position ${JSON.stringify(position.coords.latitude)}`);
 
   status.textContent = '';
-  mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+  //mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
   mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
   status.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
   localStorage.setItem("latitude", latitude);

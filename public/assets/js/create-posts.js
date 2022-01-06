@@ -1,6 +1,19 @@
 async function updateGeoCoords(position) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
+  //const latitude = position.coords.latitude;
+  //const longitude = position.coords.longitude;
+
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+
+  if(latitude) // if lat is valid let the value be assigned
+    latitude = latitude;
+  else // else we could not pull the lat, assign something valid by default
+    latitude=36.77;
+
+  if(longitude) 
+    longitude=longitude
+  else
+    longitude = 119.41;
 
   status.textContent = "";
   //mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
@@ -51,7 +64,10 @@ async function submitPost(event) {
 
     //--------------
   }
+  else
+    window.alert("Please turn on location tracking \n in your browser and PC settings to Post!")
 }
+
 
 function initTestGeoCoords() {
   if (!navigator.geolocation) {
