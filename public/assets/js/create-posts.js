@@ -5,16 +5,6 @@ async function updateGeoCoords(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
 
-  if(latitude) // if lat is valid let the value be assigned
-    latitude = latitude;
-  else // else we could not pull the lat, assign something valid by default
-    latitude=36.77;
-
-  if(longitude) 
-    longitude=longitude
-  else
-    longitude = 119.41;
-
   status.textContent = "";
   //mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
   //mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
@@ -39,8 +29,9 @@ async function submitPost(event) {
   const latitude = localStorage.getItem("latitude");
   const longitude = localStorage.getItem("longitude");
 
-  //const user_id = 3;
-  if (title && contents && latitude && longitude) {
+
+  //if (title && contents && latitude && longitude) {
+  if (title && contents) {
     const response = await fetch("/create-post/", {
       method: "post",
       body: JSON.stringify({
@@ -65,7 +56,8 @@ async function submitPost(event) {
     //--------------
   }
   else
-    window.alert("Please turn on location tracking \n in your browser and PC settings to Post!")
+    window.alert(`Missing Fields: \n please add a title and description.`)
+  //  window.alert("Please turn on location tracking \n in your browser and PC settings to Post!")
 }
 
 
