@@ -10,13 +10,14 @@
                 </div>
 
                 <div class="right menu">
-                    <a class=" item" href="/">Home</a>
-                    <a class=" item" href="/view-posts">View Posts</a>
+                    <a class="item" href="/">Home</a>
+                    <a class="item" href="/view-posts">View Posts</a>
                     {{#if loggedIn}}
-                    <button id="logout" class=" item">Logout</button>
+                    {{!-- Id needs to be logout for user to logout. Referenced in logout.js --}}
+                    <a class="item logout" id="logout" >Logout</button>
                     {{else}}
-                    <a class=" item" href="/login">Login</a>
-                    <a class=" item" href="/signup">Sign Up</a>
+                    <a class="item" href="/login">Login</a>
+                    <a class="item" href="/signup">Sign Up</a>
                     {{/if}}
 
                 </div>
