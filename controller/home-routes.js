@@ -64,12 +64,15 @@ router.get('/view-posts', (req, res) => {
     Post.findAll({
             include: [{
                 model: Comment,
+                order:[['id', 'desc']],
                 include: [{
                     model: User,
-                }]
+                }],
+               
             }, {
                 model: User,
-            }]
+            }],
+            order:[['id', 'desc']]
         })
         .then(postData => {
             const posts = postData.map(post => {
@@ -77,6 +80,7 @@ router.get('/view-posts', (req, res) => {
                     plain: true
                 })
             })
+       console.log(posts);
 
             res.render('view-posts', {
                 posts,

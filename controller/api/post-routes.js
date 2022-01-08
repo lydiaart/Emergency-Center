@@ -100,6 +100,7 @@ router.post('/', withAuth, (req, res) => {
     // expects {title: 'Flooding in Arden Fair mall', contents: 'South side of mall', 
     //          latitude: -143, longitude: 45, user_id: 1, 
     //          location: 'Sacramento County, CA' }
+    console.log(req.body)
     Post.create({
             title: req.body.title,
             contents: req.body.contents,

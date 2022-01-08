@@ -88,6 +88,12 @@ body {
   color: white;
 }
 
+/*remove border on menu logout button so it matches list items in menu*/
+.item.logout {
+  border-width: 0px;
+  border-style: none;
+}
+
 /* to remove extra padding on mobile footer when menu stacked*/
 @media only screen and (max-width: 767px){
 .ui.stackable.divided:not(.vertically).grid>.row>.column {
