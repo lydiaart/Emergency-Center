@@ -1,14 +1,8 @@
 Robyn:
 README.md on test-merge branch
 
-home-routes.js : 
-user-routes.js: 
 
-create-comment.js:joe
-login.js: 
-logout.js: 
-login.handelbars: 
-header.handlebars:  
+public/assets/js/comment.js: joe
 
 controller/controllers directory: David
-controller/api/comment-routes.js: Joe (testing the texting feature on a seperate branch)
+controller/api/post-routes.js: Joe 
