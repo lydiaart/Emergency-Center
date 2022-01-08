@@ -1,8 +1,5 @@
 Robyn:
 README.md on test-merge branch
 
-
-public/assets/js/comment.js: joe
-
 controller/controllers directory: David
-controller/api/post-routes.js: Joe 
+controller/api/user-routes.js: Joe 
