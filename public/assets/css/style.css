@@ -6,14 +6,12 @@
   margin-left: 10% !important;
 }
 
-html {
-  overflow-y: scroll;
-}
-
 body {
   position: absolute;
   z-index: 3;
   width: 100%;
+  overflow-y: scroll;
+  /* min-height: 100vh; */
 }
 
 .hide {
@@ -66,11 +64,9 @@ body {
   width: 0px;
 }
 
-/*to keep footer from overlapping with content - margin bottom*/
+/*to keep footer from overlapping with content - padding bottom*/
 #page-container {
-  position: relative;
-  min-height: 100vh;
-  margin-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 /*removes negative margin of -1rem, causes overlapping with footer*/
@@ -81,23 +77,22 @@ body {
 /*fixed footer with margin*/
 .footer {
   position: fixed !important;
-  margin-top: 50px !important;
   bottom: 0 !important;
   left: 0 !important;
   width: 100% !important;
   color: white;
 }
 
-/*remove border on menu logout button so it matches list items in menu*/
-.item.logout {
-  border-width: 0px;
-  border-style: none;
-}
 
 /* to remove extra padding on mobile footer when menu stacked*/
 @media only screen and (max-width: 767px){
-.ui.stackable.divided:not(.vertically).grid>.row>.column {
-  padding-top: 0!important;
-  padding-bottom: 0!important;
-}
+  .ui.stackable.divided:not(.vertically).grid>.column:not(.row) {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .footer {
+    position: relative !important;
+  }
+
 }
