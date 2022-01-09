@@ -24,7 +24,7 @@ async function signupFormHandler(event) {
       console.log('success, user registered');
       document.location.replace('/dashboard');
     } else {
-      alert("errr");
+      //alert();
     }
   }
 }
@@ -53,7 +53,13 @@ async function loginFormHandler(event) {
       // after user logs in, send them back to their original page/ previous page
       location.replace(document.referrer);
     } else {
-      alert(response.statusText);
+      // This is to show the error messages when login username or password is incorrect.
+      var error = document.querySelector(".error")
+      const message = await response.json()
+      console.log(message)
+      error.textContent = message.message
+      error.style.display = "block"
+     // alert(response.message);
     }
   }
 }
