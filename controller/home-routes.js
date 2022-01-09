@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
-const axios = require('axios')
-require('dotenv').config()
+const axios = require('axios');
+const withAuth = require('../utils/auth')
 
 router.post('/comments', (req, res) => {
     res.json({post_id:req.body.post_id})
@@ -82,7 +82,8 @@ router.get('/view-posts', (req, res) => {
                 }]
             }, { // pull the user data associated to a single post
                 model: User,
-            }]
+            }],
+            order:[['id', 'desc']]
         })
         .then(postData => {
             const posts = postData.map(post => {
@@ -90,6 +91,7 @@ router.get('/view-posts', (req, res) => {
                     plain: true
                 })
             })
+       console.log(posts);
 
             // send the data pulled back to the client
             // render the view-posts handlebar with the data listed below
@@ -100,7 +102,7 @@ router.get('/view-posts', (req, res) => {
         })
 });
 
-router.get('/create-post', (req, res) => {
+router.get('/create-post', withAuth, (req, res) => {
     res.render('create-post', {
         loggedIn: req.session.loggedIn
     })
