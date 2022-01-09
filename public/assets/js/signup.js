@@ -30,55 +30,46 @@ async function signupFormHandler(event) {
   const first_name = document.querySelector('#firstName-signup').value.trim();
   const last_name = document.querySelector('#lastName-signup').value.trim();
   const avatar = document.querySelector('#avatar-signup').value.trim();
+  const error = document.querySelector('.error')
 
-  if (username && phone && password && first_name && last_name && avatar) {
-    const response = await fetch('/api/users', {
-      method: 'post',
-      body: JSON.stringify({
-        username,
-        phone,
-        password,
-        first_name,
-        last_name,
-        avatar
-      }),
-      headers: {
-        'Content-Type': 'application/json'
+  const isValidPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{3,}$/.test(password)
+
+
+  console.log(isValidPassword)
+
+  if(isValidPassword){
+    if (username && phone && password && first_name && last_name && avatar  ) {
+
+
+      const response = await fetch('/api/users', {
+        method: 'post',
+        body: JSON.stringify({
+          username,
+          phone,
+          password,
+          first_name,
+          last_name,
+          avatar
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+  
+      // check the response status
+      if (response.ok) {
+        console.log('success, user registered');
+        document.location.replace('/');
+      } else {
+        alert(response.statusText);
       }
-    });
-
-    // check the response status
-    if (response.ok) {
-      console.log('success, user registered');
-      document.location.replace('/');
-    } else {
-      alert(response.statusText);
     }
   }
-}
-
-async function loginFormHandler(event) {
-  event.preventDefault();
-
-  const username = document.querySelector('#username-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
-
-  if (username && password) {
-    const response = await fetch('/api/users/login', {
-      method: 'post',
-      body: JSON.stringify({
-        username,
-        password
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert(response.statusText);
-    }
+  else {
+    error.textContent = 'Minimum three characters, at least one letter and one number'
+    error.style.display = "block"
   }
+
+  
 }
+
