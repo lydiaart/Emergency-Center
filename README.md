@@ -5,14 +5,15 @@
  
 
 ## Description
-Emergency Center app is a forum for disaster and emergency incidents. You can view incidents that are reported for or near your current location. Sign-up to report first-hand accounts of the disaster or comment on posts to update the incident and add more information.
+Emergency Center app is a forum for local disaster and emergency incidents. You can view incidents that are reported for or near your current location. Sign-up to report first-hand accounts of the disaster. You can also comment on posts to update the incident to add more information as incidents unfold.
 
 Choose an avatar to display on your comments and posts on sign up.
+
+Recieve text messages of new comments that you post and comment on. Your text message will display the new comment and a link to the post.
 
 
 
 ## Table of Contents
-* [Installation](#installation)
 * [Built With](#builtwith)
 * [Usage](#usage)
 * [Websites](#websites)
@@ -21,28 +22,25 @@ Choose an avatar to display on your comments and posts on sign up.
 
 
 ## Built With
-  * bcrypt
-  * connect-session-sequelize
-  * dotenv
-  * express
-  * express-handlebars package
+  * bcrypt 
+  * connect-session-sequelize 
+  * dotenv 
+  * express 
+  * express-handlebars package 
   * express-session
   * mysql2
   * nodemon
   * sequelize 
   * Semantic UI
   * axios
-
-
-## Installation 
-  1. git clone git@github.com:flowingcityloy/Emergency-Center
-  2. npm i
-
+  * Twilio
 
 
 ## Usage 
-The following image demonstrates the web application's appearance and functionality:
-<p><img src=""/></p>
+The following demonstrates the web application's appearance and functionality:
+
+
+<img src="./public/assets/images/emergency-center-usage.gif" width="400" height="" />
 
 
 
@@ -53,26 +51,20 @@ The following image demonstrates the web application's appearance and functional
 
 
 ## Credits
-Semantic UI<br/>
 https://www.freelogodesign.org/ <br/>
-google.com <br>
 https://www.nytimes.com/wirecutter/reviews/emergency-preparedness/ <br/>
-Robyn Graham<br/>
-David Barron<br/>
-Joe Magannom<br/>
-Lydia Loy
 
-
-
-## Questions
-  
-  If you have any questions, please reach us at:<br/>
-  
   [David Barron](https://github.com/webgeekbear)<br/>
   [Robyn Graham](https://github.com/robyng)<br/>
   [Joe Mogannam](https://github.com/mogannam)<br/>
   [Lydia Loy](https://github.com/flowingcityloy)<br/>
 
-  Thank you!
 
 
+## Questions or Issues
+  
+If you have any questions or issues please create issue here:<br/>
+https://github.com/flowingcityloy/Emergency-Center/issues  
+
+
+Thank you!
