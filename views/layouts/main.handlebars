@@ -10,14 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
         integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" type="image/ico" href="/assets/images/favicon.ico"/>
+    <script src="https://kit.fontawesome.com/3341819b7b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
-
+        <div id="page-container">
     {{>header}}
+
     {{{body}}}
+    </div>
     {{>footer}}
     {{#if loggedIn}}
     <script src="/assets/js/logout.js"></script>
@@ -27,6 +29,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
         integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
 </body>
 
 </html>

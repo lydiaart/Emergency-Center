@@ -17,11 +17,18 @@ router.get('/', (req, res) => {
                 'title',
                 'latitude',
                 'longitude',
-                'created_at'
+                'created_at',
+                'location'
             ],
             include: [{
                     model: Comment,
-                    attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                    attributes: [
+                        'id',
+                        'comment_text',
+                        'post_id',
+                        'user_id',
+                        'created_at'
+                    ],
                     include: {
                         model: User,
                         attributes: ['username', 'phone']
@@ -51,7 +58,8 @@ router.get('/:id', (req, res) => {
                 'title',
                 'latitude',
                 'longitude',
-                'created_at'
+                'created_at',
+                'location'
             ],
             include: [{
                     model: Comment,
@@ -64,12 +72,12 @@ router.get('/:id', (req, res) => {
                     ],
                     include: {
                         model: User,
-                        attributes: ['username', 'phone']
+                        attributes: ['username', 'phone', 'first_name', 'last_name','avatar']
                     }
                 },
                 {
                     model: User,
-                    attributes: ['username', 'phone']
+                    attributes: ['username', 'phone','first_name', 'last_name', 'avatar']
                 }
             ]
         })
@@ -90,13 +98,15 @@ router.get('/:id', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
     // expects {title: 'Flooding in Arden Fair mall', contents: 'South side of mall', 
-    //          latitude: -143, longitude: 45, user_id: 1 }
+    //          latitude: -143, longitude: 45, user_id: 1, 
+    //          location: 'Sacramento County, CA' }
     Post.create({
             title: req.body.title,
             contents: req.body.contents,
             latitude: req.body.latitude,
             longitude: req.body.longitude,
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
+            location: req.body.location
         })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {

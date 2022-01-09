@@ -1,4 +1,3 @@
-
 //https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples
 // https://w3c.github.io/geolocation-api/#dom-navigator-geolocation
 //https://github.com/mdn/content/blob/main/files/en-us/web/api/navigator/geolocation/index.md
@@ -9,16 +8,27 @@ mapLink.href = '';
 mapLink.textContent = '';
 
 function success(position) {
-  const latitude  = position.coords.latitude;
-  const longitude = position.coords.longitude;
-  console.log(`position ${JSON.stringify(position.coords.latitude)}`)
+
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+
+  if(latitude) // if lat is valid let the value be assigned
+    latitude = latitude;
+  else // else we could not pull the lat, assign something valid by default
+    latitude=36.77;
+
+  if(longitude) 
+    longitude=longitude
+  else
+    longitude = 119.41;
+  //console.log(`position ${JSON.stringify(position.coords.latitude)}`);
 
   status.textContent = '';
-  mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+  //mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
   mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
   status.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
-  localStorage.setItem("latitude", latitude );
-  localStorage.setItem("longitude", longitude );
+  localStorage.setItem("latitude", latitude);
+  localStorage.setItem("longitude", longitude);
 }
 
 function error() {
@@ -26,7 +36,7 @@ function error() {
 }
 
 function getCacheGeoCoords() {
-  if(!navigator.geolocation) {
+  if (!navigator.geolocation) {
     status.textContent = 'Geolocation is not supported by your browser';
   } else {
     status.textContent = 'Locating…';

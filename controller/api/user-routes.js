@@ -7,7 +7,6 @@ const {
 
 // get all users
 router.get('/', (req, res) => {
-    
     User.findAll({
             attributes: {
                 exclude: ['password']
@@ -36,12 +35,17 @@ router.get('/:id', (req, res) => {
                         'contents',
                         'latitude',
                         'longitude',
-                        'created_at'
+                        'created_at',
+                        'location'
                     ]
                 },
                 {
                     model: Comment,
-                    attributes: ['id', 'comment_text', 'created_at'],
+                    attributes: [
+                        'id',
+                        'comment_text',
+                        'created_at'
+                    ],
                     include: {
                         model: Post,
                         attributes: ['title']
@@ -66,13 +70,13 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     // expects {username: 'david', password: 'password123', phone: 9165551234}
-    console.log(`in user-routes.js creating user`)
+    //console.log(`in user-routes.js creating user`)
     User.create({
             username: req.body.username,
             password: req.body.password,
             phone: req.body.phone,
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
             avatar: req.body.avatar
         })
         .then(dbUserData => {
@@ -93,7 +97,7 @@ router.post('/', (req, res) => {
 
 router.post('/login', (req, res) => {
     // expects {username: 'david', password: 'password123'}
-    console.log(`\n \n \n  \n ********** in user-routes.js:/login`)
+    //console.log(`\n \n \n  \n ********** in user-routes.js:/login`)
     User.findOne({
         where: {
             username: req.body.username
