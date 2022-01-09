@@ -2,25 +2,14 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 require('dotenv').config();
-const axios = require('axios')
-const googleApiKey = process.env.googleApiKey
+const axios = require('axios') // used to make external api calls within node.js
+const googleApiKey = process.env.googleApiKey // used to query api for location
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
 router.get('/', withAuth, (req, res) => {
     res.render('create-post', { loggedIn: req.session.loggedIn });
 });
-
-
-//twillio api configs
-//const twillioAccountSid = process.env.twillioAccountSid;
-//const TwillioAuthToken = process.env.TwillioAuthToken;
-//const twillioFromNumber = process.env.twillioFromNumber;
-//const clientTwillio = require('twilio')(twillioAccountSid, TwillioAuthToken);
-
-
-//https://maps.googleapis.com/maps/api/geocode/json?latlng=38.4097,-122.7388&key=apiKey
-
 
 //create a post
 router.post('/', withAuth, (req, res) => {
@@ -34,25 +23,25 @@ router.post('/', withAuth, (req, res) => {
     let location = "location unkown";
     let data;
 
+    // query  the google maps api for the city and state of the gps coordinates
     const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${googleApiKey}`
-    console.log(`url is ${url}`)
+
+    //console.log(`url is ${url}`)
     
         axios({
             method:'get',
             url : url,
         })
         .then(function (responseMapAPI) {
-            
+            // save data from axios/ google maps fetch in a friendly variable
             const MapAPiData = responseMapAPI.data
 
             // if a valid GPS coord is pulled, set the location
             if (latitude && longitude)
                 location = MapAPiData.results[4].formatted_address
-            //console.log(`location  is ${JSON.stringify(location)}`)
-            
         })
         .then(()=>{
-
+            // create a new post in the  DB  using sequalize
             Post.create({
                 title: title,
                 contents: contents,
@@ -64,10 +53,8 @@ router.post('/', withAuth, (req, res) => {
                 .then(dbPostData => {
                     // create the post then send the data back to the client
                     data = dbPostData
-                    //console.log(`data is ${JSON.stringify(data)}`)
                     res.json(dbPostData)
-                })
-           
+                }) 
         })
         .catch(err => {
             console.log(err);

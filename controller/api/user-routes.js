@@ -1,14 +1,11 @@
 const router = require('express').Router();
-const {
-    User,
-    Post,
-    Comment
-} = require('../../models');
+const {User,Post,Comment} = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
+    // when the route /api/users/ is called  pull all users in the DB
     User.findAll({
-            attributes: {
+            attributes: { // pull all users and thier attributes, except for the password hash
                 exclude: ['password']
             }
         })
@@ -19,15 +16,17 @@ router.get('/', (req, res) => {
         });
 });
 
+// pull a specific user by its id, and the posts they made & any related comments 
+// when calling the route /api/users:user_id 
 router.get('/:id', (req, res) => {
     User.findOne({
-            attributes: {
+            attributes: { // pull the single users attributes, except the password hash
                 exclude: ['password']
             },
             where: {
                 id: req.params.id
             },
-            include: [{
+            include: [{ // pull this users posts, and each posts post data
                     model: Post,
                     attributes: [
                         'id',
@@ -39,14 +38,14 @@ router.get('/:id', (req, res) => {
                         'location'
                     ]
                 },
-                {
+                { // pull the comments associated with each post
                     model: Comment,
                     attributes: [
                         'id',
                         'comment_text',
                         'created_at'
                     ],
-                    include: {
+                    include: { // include the post title with the comments pulled
                         model: Post,
                         attributes: ['title']
                     }
@@ -68,6 +67,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
+// create a new user
 router.post('/', (req, res) => {
     // expects {username: 'david', password: 'password123', phone: 9165551234}
     //console.log(`in user-routes.js creating user`)
@@ -118,7 +118,7 @@ router.post('/login', (req, res) => {
             });
             return;
         }
-        //console.log(`********* dbUserData ${JSON.stringify(dbUserData)}`)
+        // save the new users data in a valid sesssion
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
@@ -133,6 +133,7 @@ router.post('/login', (req, res) => {
     });
 });
 
+// log a user out by destroying the valid session
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
