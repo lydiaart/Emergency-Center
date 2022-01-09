@@ -14,11 +14,14 @@ Recieve text messages of new comments that you post and comment on. Your text me
 
 
 ## Table of Contents
-* [Built With](#builtwith)
-* [Usage](#usage)
-* [Websites](#websites)
-* [Credits](#credits)
-* [Questions](#questions)
+- [Emergency-Center](#emergency-center)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Built With](#built-with)
+  - [Usage](#usage)
+  - [Websites](#websites)
+  - [Credits](#credits)
+  - [Questions or Issues](#questions-or-issues)
 
 
 ## Built With
@@ -46,7 +49,7 @@ The following demonstrates the web application's appearance and functionality:
 
 ## Websites
 [Repository](https://github.com/flowingcityloy/Emergency-Center)<br />
-[Live site](https://emergency-center.herokuapp.com//)
+[Live site](https://emergency-center.herokuapp.com/)
 
 
 
