@@ -1,5 +1,0 @@
-Robyn:
-README.md on test-merge branch
-
-controller/controllers directory: David
-controller/api/user-routes.js: Joe 
