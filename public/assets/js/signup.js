@@ -37,10 +37,8 @@ async function signupFormHandler(event) {
 
   console.log(isValidPassword)
 
-  if(isValidPassword){
-    if (username && phone && password && first_name && last_name && avatar  ) {
-
-
+  if (isValidPassword) {
+    if (username && phone && password && first_name && last_name && avatar) {
       const response = await fetch('/api/users', {
         method: 'post',
         body: JSON.stringify({
@@ -55,7 +53,7 @@ async function signupFormHandler(event) {
           'Content-Type': 'application/json'
         }
       });
-  
+
       // check the response status
       if (response.ok) {
         console.log('success, user registered');
@@ -69,7 +67,5 @@ async function signupFormHandler(event) {
     error.textContent = 'Minimum three characters, at least one letter and one number'
     error.style.display = "block"
   }
-
-  
 }
 
