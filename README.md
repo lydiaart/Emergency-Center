@@ -31,6 +31,7 @@ Recieve text messages of new comments that you post and comment on. Your text me
   * express 
   * express-handlebars package 
   * express-session
+  * Google Maps Api
   * mysql2
   * nodemon
   * sequelize 
