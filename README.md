@@ -9,7 +9,7 @@ Emergency Center app is a forum for local disaster and emergency incidents. You 
 
 Choose an avatar to display on your comments and posts on sign up.
 
-Recieve text messages of new comments that you post and comment on. Your text message will display the new comment and a link to the post.
+Receive text messages of new comments that you post and comment on. Your text message will display the new comment and a link to the post.
 
 
 
