@@ -14,7 +14,7 @@ Receive text messages of new comments that you post and comment on. Your text me
 
 
 ## Table of Contents
-- [Emergency-Center](#emergency-center)
+  - [Emergency-Center](#emergency-center)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Built With](#built-with)
@@ -49,7 +49,7 @@ The following demonstrates the web application's appearance and functionality:
 
 
 ## Websites
-[Repository](https://github.com/flowingcityloy/Emergency-Center)<br />
+[Repository](https://github.com/lydiaart/Emergency-Center)<br/>
 [Live site](https://emergency-center.herokuapp.com/)
 
 
@@ -61,14 +61,14 @@ https://www.nytimes.com/wirecutter/reviews/emergency-preparedness/ <br/>
   [David Barron](https://github.com/webgeekbear)<br/>
   [Robyn Graham](https://github.com/robyng)<br/>
   [Joe Mogannam](https://github.com/mogannam)<br/>
-  [Lydia Loy](https://github.com/flowingcityloy)<br/>
+  [Lydia L](https://github.com/lydiaart)<br/>
 
 
 
 ## Questions or Issues
   
 If you have any questions or issues please create issue here:<br/>
-https://github.com/flowingcityloy/Emergency-Center/issues  
+https://github.com/lydiaart/Emergency-Center/issues  
 
 
 Thank you!
